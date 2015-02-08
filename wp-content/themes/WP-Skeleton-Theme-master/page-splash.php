@@ -8,7 +8,10 @@
     while ( have_posts() ) : the_post();
    
 ?> 
-
-<?php the_title(); ?>
-
+<div class="container">
+	<?php if(has_post_thumbnail()): ?>
+		<figure class="banner"><?php the_post_thumbnail(); ?></figure>
+	<?php endif; ?>
+	<?php the_title(); ?>
+</div>
 <?php endwhile; ?>
