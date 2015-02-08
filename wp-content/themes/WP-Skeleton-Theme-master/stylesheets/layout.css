@@ -72,7 +72,7 @@
     font-style: normal;
 }
 
-h1 {
+h1, h2, h3 {
 	text-transform: uppercase;
 	font-family: 'langdonregular';
 	color: #313131;
@@ -86,9 +86,23 @@ h1:after {
 	background: #e7e930;
 	margin-top: 8px;
 }
+h2:after {
+
+}
+h3:after {
+	content: "";
+	display: block;
+	height: 5px;
+	width: 10%;
+	background: #e7e930;
+	margin-top: 8px;
+}
 
 a {
 	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
 }
 
 .banner > img {
@@ -104,6 +118,7 @@ a {
 	font-size: 26px;
 	text-decoration: none;
 	font-family: 'klinic_slabbook';
+	text-decoration: none !important;
 }
 
 /* splash page */
@@ -125,7 +140,29 @@ a {
 	border-top: 7px solid #172b56;
 }
 
-#splash-page .container {
+#splash-page a:hover {
+	text-decoration: underline;
+}
+
+#splash-page .header {
+	width: 100%;
+    height:60px;
+    border-bottom:  7px solid #4061a3;
+    clear: both;
+    background: #234384;
+    text-align: right;
+}
+
+	#splash-page .header a {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-family: 'klinic_slablight_italic';
+		line-height: 60px;
+		letter-spacing: 0.05em;
+	}
+
+#splash-page .containerWrapper > .container {
 	margin: 50px auto 100px;
 }
 #splash-page h1 {
@@ -165,6 +202,88 @@ a {
 #splash-page .cta .mandmBtn {
 	margin: 0 10px;
 }
+
+/* Footer */
+#splash-page .footer .container {
+	padding-top: 50px;
+}
+
+#splash-page .footer h3 {
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 0.9em;
+	font-family: 'langdonregular';
+	color: #ffffff;
+	margin-bottom: 0.68em;
+}
+
+#splash-page .footer h3:after {
+	content: "";
+	display: block;
+	height: 5px;
+	width: 10%;
+	background: #e7e930;
+	margin-top: 8px;
+}
+
+#splash-page .footer .footerLeft,
+#splash-page .footer .footerRight {
+	display: inline-block;
+	width: 48%;
+	vertical-align: middle;
+}
+
+	.footer .colophon {
+		display: inline-block;
+		width: 46%;
+		margin:0 1%;
+		vertical-align: top;
+	}
+
+	#splash-page .footer .colophon address, 
+	#splash-page .footer .colophon p.contact {
+		color: #fff;
+		font-family: 'klinic_slablight';
+		font-size: 16px;
+		margin: 0;
+		line-height: 1.25em;
+	}
+
+	#splash-page .footer .colophon address {
+		margin-bottom: 10px;
+	}
+
+	#splash-page .footer .colophon.social p.contact {
+		font-size: 18px;
+		line-height: 1.7em;
+	}
+		#splash-page .footer .colophon .fa {
+			width: 25px;
+		}
+
+		#splash-page .footer .colophon a {
+			color: #e7e930;
+			font-family: 'klinic_slabbook_italic';
+		}
+			#splash-page .footer .colophon a:hover {
+				text-decoration: underline;
+			}
+
+		#splash-page .footer .colophon.social a {
+			color: #ffffff;
+			font-family: 'klinic_slablight';
+		}
+			
+				
+
+#splash-page .footer .footerRight {
+	text-align: right;
+}
+	#splash-page .footer .footerRight p {
+		color: #fff;
+		font-size: 14px;
+		margin:0 0 10px 0;
+	}
 
 /* #Page Styles
 ================================================== */
