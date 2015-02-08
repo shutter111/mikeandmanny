@@ -42,5 +42,6 @@
 
 <body <?php body_class(); ?>><!-- the Body  -->
 
-<div class="container">
+	<?php get_template_part( 'menu'); ?>
+<!--<div class="container">-->
 

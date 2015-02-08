@@ -4,9 +4,9 @@
  * @subpackage WP-Skeleton
  */
 ?>
-  <div class="header">  
+<div class="header">  
     
-    <div class="seven columns alpha"> 
+    <!--<div class="seven columns alpha"> 
         <div class="logo">
             <a href="<?php echo home_url(); //make logo a home link?>">
             <h1><?php echo get_bloginfo('name');?></h1>
@@ -15,11 +15,11 @@
         </div>
     </div> 
     
-    <div class="offset-by-one omega">
+    <div class="offset-by-one omega">-->
 
     <!--  the Menu -->
-    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+    <!--<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
-    </div>
+    </div>-->
 </div> <!--  End blog header -->
    
