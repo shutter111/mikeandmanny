@@ -16,9 +16,154 @@
 
 /* #Site Styles
 ================================================== */
+@font-face {
+    font-family: 'klinic_slablight_italic';
+    src: url('../fonts/klinicslablightit-webfont.eot');
+    src: url('../fonts/klinicslablightit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/klinicslablightit-webfont.woff2') format('woff2'),
+         url('../fonts/klinicslablightit-webfont.woff') format('woff'),
+         url('../fonts/klinicslablightit-webfont.ttf') format('truetype'),
+         url('../fonts/klinicslablightit-webfont.svg#klinic_slablight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'klinic_slabbook_italic';
+    src: url('../fonts/klinicslabbookit-webfont.eot');
+    src: url('../fonts/klinicslabbookit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/klinicslabbookit-webfont.woff2') format('woff2'),
+         url('../fonts/klinicslabbookit-webfont.woff') format('woff'),
+         url('../fonts/klinicslabbookit-webfont.ttf') format('truetype'),
+         url('../fonts/klinicslabbookit-webfont.svg#klinic_slabbook_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'klinic_slablight';
+    src: url('../fonts/klinicslablight-webfont.eot');
+    src: url('../fonts/klinicslablight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/klinicslablight-webfont.woff2') format('woff2'),
+         url('../fonts/klinicslablight-webfont.woff') format('woff'),
+         url('../fonts/klinicslablight-webfont.ttf') format('truetype'),
+         url('../fonts/klinicslablight-webfont.svg#klinic_slablight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'klinic_slabbook';
+    src: url('../fonts/klinicslabbook-webfont.eot');
+    src: url('../fonts/klinicslabbook-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/klinicslabbook-webfont.woff2') format('woff2'),
+         url('../fonts/klinicslabbook-webfont.woff') format('woff'),
+         url('../fonts/klinicslabbook-webfont.ttf') format('truetype'),
+         url('../fonts/klinicslabbook-webfont.svg#klinic_slabbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'langdonregular';
+    src: url('../fonts/langdon-webfont.eot');
+    src: url('../fonts/langdon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/langdon-webfont.woff2') format('woff2'),
+         url('../fonts/langdon-webfont.woff') format('woff'),
+         url('../fonts/langdon-webfont.ttf') format('truetype'),
+         url('../fonts/langdon-webfont.svg#langdonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-family: 'langdonregular';
+	color: #313131;
+}
+
+h1:after {
+	content: "";
+	display: block;
+	height: 10px;
+	width: 10%;
+	background: #e7e930;
+	margin-top: 8px;
+}
+
+a {
+	text-decoration: none;
+}
 
 .banner > img {
 	border-bottom: 10px solid #234384;
+}
+
+.mandmBtn {
+	background: #e7e930;
+	color: #313131;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 20px 50px;
+	font-size: 26px;
+	text-decoration: none;
+	font-family: 'klinic_slabbook';
+}
+
+/* splash page */
+#splash-page {
+	height: 100%;
+}
+
+#splash-page .containerWrapper {
+	min-height: 100%;
+	margin: 0 auto -272px;
+}
+.push {
+	height: 272px;
+}
+#splash-page .footer  {
+	height: 265px;
+	background: url('../images/footerbg.jpg') no-repeat center top #234384;
+	background-size: cover;
+	border-top: 7px solid #172b56;
+}
+
+#splash-page .container {
+	margin: 50px auto 100px;
+}
+#splash-page h1 {
+	text-transform: uppercase;
+	font-size: 119px;
+	line-height: 0.9em;
+	font-family: 'langdonregular';
+	color: #313131;
+}
+#splash-page h1:after {
+	content: "";
+	display: block;
+	height: 10px;
+	width: 10%;
+	background: #e7e930;
+	margin-top: 8px;
+}
+#splash-page .banner {
+	margin-bottom: 20px;
+}
+#splash-page .banner > img {
+	border-bottom: 10px solid #234384;
+}
+
+#splash-page p {
+	margin-top: 40px;
+	font-size: 32px;
+	line-height: 1.2em;
+	font-family: 'klinic_slablight';
+	color: #313131;
+}
+
+#splash-page .cta {
+	text-align: center;
+	margin-top: 70px;
+}
+#splash-page .cta .mandmBtn {
+	margin: 0 10px;
 }
 
 /* #Page Styles
@@ -28,17 +173,51 @@
 ================================================== */
 
 	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {}
+	@media only screen and (max-width: 959px) {
+		#splash-page .container {
+			width: 92%;
+		}
+		.mandmBtn {
+			display: block;;
+		}
+		#splash-page .cta .mandmBtn {
+			margin: 0 10px 20px;
+		}
+
+		#splash-page h1 {
+			font-size: 85px;
+		}
+	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
 	@media only screen and (min-width: 768px) and (max-width: 959px) {}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+		#splash-page h1 {
+			font-size: 75px;
+		}
+	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+	@media only screen and (max-width: 479px) {
+		#splash-page .container {
+			margin-bottom: 50px;
+		}
+
+		#splash-page .cta {
+			margin-top: 30px;
+		}
+
+		#splash-page h1 {
+			font-size: 45px;
+		}
+
+		#splash-page p {
+			font-size: 24px;
+		}
+	}
 
