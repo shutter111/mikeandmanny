@@ -113,7 +113,12 @@ h1:after {
 	margin-top: 8px;
 }
 h2:after {
-
+	content: "";
+	display: block;
+	height: 6px;
+	width: 7%;
+	background: #e7e930;
+	margin-top: 8px;
 }
 h3:after {
 	content: "";
@@ -325,6 +330,32 @@ a:hover {
 			font-family: 'geared_slabextrabold';
 			color: #fff;
 		}
+
+/*application form*/
+.b-modal {
+	background-color: rgb(35,67,132) !important;
+}
+
+.container.app {
+	display: none;
+}
+
+#application-form {
+	width: 66%; /*780px*/
+	background: #fff;
+	padding: 60px 7%;
+	margin: 0 auto;
+}
+	#application-form h2 {
+	}
+	#application-form h2:after {
+		content: "";
+		display: block;
+		height: 6px;
+		width: 7%;
+		background: #e7e930;
+		margin-top: 8px;
+	}
 
 /* #Page Styles
 ================================================== */

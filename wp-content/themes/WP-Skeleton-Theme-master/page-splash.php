@@ -3,6 +3,12 @@
  * @package WordPress
  * @subpackage WP-Skeleton
  */
+	wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' );
+	wp_enqueue_script( 'bpopup', get_template_directory_uri().'/js/jquery.bpopup.min.js', 'jquery' );
+	wp_enqueue_script( 'splashjs', get_template_directory_uri().'/js/splash.js', 'bpopup' );
+	/*
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.bpopup.min.js"></script>*/
  	get_header();
 ?>
 <div id="splash-page">
@@ -24,7 +30,7 @@
 			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 			<div class="cta">
-				<a class="mandmBtn" href="#">Apply Now</a>
+				<a class="mandmBtn" id="applynow" href="#">Apply Now</a>
 				<a class="mandmBtn" href="#">For Coaches</a>
 			</div>
 		</div>
@@ -52,6 +58,14 @@
 				<p class="cr">&copy; Mike &amp; Manny Foundation 2014. All Rights Reserved.</p>
 				<p class="madeBy">Made by <strong>Type &amp; Co.</strong></p>
 			</div>
+		</div>
+	</div>
+
+	<!-- inline application form -->
+	<div class="container app">
+		<div id="application-form">
+			<h2>Athlete application</h2>
+			<?php echo apply_filters('the_content', get_post_meta($post->ID, 'application-form', true)); ?>
 		</div>
 	</div>
 </div>
