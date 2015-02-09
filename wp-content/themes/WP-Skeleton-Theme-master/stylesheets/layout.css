@@ -72,6 +72,32 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'geared_slabthin';
+    src: url('../fonts/gearedslab-light-webfont.eot');
+    src: url('../fonts/gearedslab-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gearedslab-light-webfont.woff2') format('woff2'),
+         url('../fonts/gearedslab-light-webfont.woff') format('woff'),
+         url('../fonts/gearedslab-light-webfont.ttf') format('truetype'),
+         url('../fonts/gearedslab-light-webfont.svg#geared_slabthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'geared_slabextrabold';
+    src: url('../fonts/gearedslab-extrabold-webfont.eot');
+    src: url('../fonts/gearedslab-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gearedslab-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/gearedslab-extrabold-webfont.woff') format('woff'),
+         url('../fonts/gearedslab-extrabold-webfont.ttf') format('truetype'),
+         url('../fonts/gearedslab-extrabold-webfont.svg#geared_slabextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 h1, h2, h3 {
 	text-transform: uppercase;
 	font-family: 'langdonregular';
@@ -122,6 +148,8 @@ a:hover {
 }
 
 /* splash page */
+
+/* sticky footer bits*/
 #splash-page {
 	height: 100%;
 }
@@ -236,9 +264,12 @@ a:hover {
 	.footer .colophon {
 		display: inline-block;
 		width: 46%;
-		margin:0 1%;
+		margin:0 1% 0 0;
 		vertical-align: top;
 	}
+		.footer .colophon:last-child {
+			margin: 0 0 0 3%;
+		}
 
 	#splash-page .footer .colophon address, 
 	#splash-page .footer .colophon p.contact {
@@ -285,6 +316,16 @@ a:hover {
 		margin:0 0 10px 0;
 	}
 
+		#splash-page .footer .footerRight p.madeBy {
+			font-family: 'geared_slabthin';
+			text-transform: uppercase;
+		}
+		#splash-page .footer .footerRight p.madeBy strong {
+			font-weight: normal;
+			font-family: 'geared_slabextrabold';
+			color: #fff;
+		}
+
 /* #Page Styles
 ================================================== */
 
@@ -313,8 +354,43 @@ a:hover {
 
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
+		#splash-page {
+			height: auto;
+		}
+
+		#splash-page .containerWrapper {
+			min-height: none;
+			margin: 0;
+		}
+		.push {
+			height: auto;
+			display: none;;
+		}
+		#splash-page .footer  {
+			height: auto;
+			padding: 50px 0;
+		}
+		#splash-page .footer .container {
+			padding-top: 0;
+			margin-bottom: 0;
+		}
 		#splash-page h1 {
 			font-size: 75px;
+		}
+
+		#splash-page .footer .footerLeft,
+		#splash-page .footer .footerRight {
+			display: block;
+			width: 100%;
+		}
+
+		#splash-page .footer .footerRight {
+			text-align: left;
+			margin: 30px 0 20px;
+		}
+
+		.footer .colophon {
+
 		}
 	}
 

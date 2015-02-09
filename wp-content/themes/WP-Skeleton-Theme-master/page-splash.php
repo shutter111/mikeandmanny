@@ -50,7 +50,7 @@
 			</div>
 			<div class="footerRight">
 				<p class="cr">&copy; Mike &amp; Manny Foundation 2014. All Rights Reserved.</p>
-				<p class="madeBy">Made by Type &amp; Co.</p>
+				<p class="madeBy">Made by <strong>Type &amp; Co.</strong></p>
 			</div>
 		</div>
 	</div>
