@@ -98,6 +98,7 @@
 
 }
 
+
 h1, h2, h3 {
 	text-transform: uppercase;
 	font-family: 'langdonregular';
@@ -136,6 +137,15 @@ a:hover {
 	text-decoration: underline;
 }
 
+textarea {
+	resize:none;
+}
+
+input[type="submit"], input[type="file"] {
+	outline: none;
+}
+
+
 .banner > img {
 	border-bottom: 10px solid #234384;
 }
@@ -150,6 +160,38 @@ a:hover {
 	text-decoration: none;
 	font-family: 'klinic_slabbook';
 	text-decoration: none !important;
+	cursor: pointer;
+	border: none;
+}
+
+.mandmBtn:hover {
+	opacity: .8;
+}
+
+.mandmBtn.sub {
+	background: #313131;
+	color: #fff;
+	font-size: 18px;
+	padding: 15px 20px;
+}
+
+.mandmBtn.prev,
+.mandmBtn.next {
+	max-width: 40%;
+	margin-top: 10px;
+}
+
+.mandmBtn.prev {
+	float: left;
+}
+
+.mandmBtn.next {
+	float: right;
+}
+
+.clear {
+	clear: both;
+	height: 0;
 }
 
 /* splash page */
@@ -171,6 +213,10 @@ a:hover {
 	background: url('../images/footerbg.jpg') no-repeat center top #234384;
 	background-size: cover;
 	border-top: 7px solid #172b56;
+}
+
+#splash-page a {
+	text-decoration: none;
 }
 
 #splash-page a:hover {
@@ -340,21 +386,151 @@ a:hover {
 	display: none;
 }
 
-#application-form {
+.application-form {
 	width: 66%; /*780px*/
 	background: #fff;
 	padding: 60px 7%;
 	margin: 0 auto;
+	position: relative;
+	display: none;
+	font-family: 'klinic_slabbook';
 }
-	#application-form h2 {
+	.application-form br {
+		display: none !important;
 	}
-	#application-form h2:after {
+
+	.application-form .closeX {
+		display: block;
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		font-size: 24px;
+		color: #234384;
+		font-family: 'langdonregular';
+		cursor: pointer;
+		width: 60px;
+		height: 60px;
+		text-align: center;
+	}
+
+	.application-form h2 {
+		margin-bottom: 30px;
+	}
+	.application-form h2:after {
 		content: "";
 		display: block;
 		height: 6px;
 		width: 7%;
 		background: #e7e930;
 		margin-top: 8px;
+	}
+
+	.application-form label,
+	.application-form input[type="text"], .application-form input[type="email"],
+	.application-form textarea {
+		background: #fff;
+		border: 1px solid #e3e3e3;
+		font-size: 18px;
+		color: #313131;
+		font-family: 'klinic_slabbook';
+	}
+
+	.application-form label {
+		border: none;
+		margin-bottom: 5px;
+	}
+
+	.application-form .block {
+		width: 100%;
+		font-size: 0;
+	}
+		.application-form .block > p,
+		.application-form .block.textarea.half > p {
+			display: inline-block;
+			width: 48%;
+			margin: 0 4% 0 0;
+			vertical-align: top;
+		}
+			.application-form .block > p:last-child,
+			.application-form .block.textarea.half > p:last-child {
+				margin: 0;
+			}
+
+			.application-form .block#address p.city {
+				width: 32%;
+			}
+
+			.application-form .block#address p.province {
+				width: 12%;
+			}
+
+			.application-form .block#personal-info p.gender {
+				width: 13%;
+			}
+
+			.application-form .block#personal-info p.year,
+			.application-form .block#personal-info p.height,
+			.application-form .block#personal-info p.weight {
+				width: 25%;
+			}
+
+			.application-form .block#gear-info p {
+				width: 30.6%;
+			}
+
+			.application-form .block.textarea > p {
+				width: 100%;
+				margin: 0;
+			}
+
+		.application-form .block > p input[type="text"],
+		.application-form input[type="email"] {
+			width: 92%;
+			padding: 0 4%;
+			height: 55px;
+			margin: 0 0 10px 0;
+		}
+
+
+		.application-form .block > p textarea {
+			width: 96%;
+			padding: 5px 2%;
+			height: 120px;
+			margin: 0 0 10px 0;
+		}
+
+		.application-form .block.submit {
+			margin: 30px 0 0 0;
+			text-align: center;
+		}
+			.application-form .block.submit > p {
+				text-align: center;
+			}
+
+		.application-form .block .note {
+			display: block;
+			font-size: 14px;
+		}
+
+	.application-form .form {
+		display: none;
+	}
+
+	.application-form .form.active-page {
+		display: block;
+	}
+
+		.application-form .block:after {
+			content: ".";
+			clear: both;
+			display: block;
+			height: 0;
+			visibility: hidden;
+		}
+
+	.application-form span.wpcf7-not-valid-tip {
+		font-size: 14px;
+		margin-bottom: 5px;
 	}
 
 /* #Page Styles
@@ -369,14 +545,23 @@ a:hover {
 			width: 92%;
 		}
 		.mandmBtn {
-			display: block;;
+			display: block;
 		}
 		#splash-page .cta .mandmBtn {
 			margin: 0 10px 20px;
 		}
 
+		input[type="submit"].mandmBtn {
+			width: 100%;
+		}
+
 		#splash-page h1 {
 			font-size: 85px;
+		}
+
+		.application-form .closeX {
+			top: 30px;
+			right: 20px;
 		}
 	}
 
@@ -423,6 +608,49 @@ a:hover {
 		.footer .colophon {
 
 		}
+
+		.application-form .closeX {
+			top: 20px;
+			text-align: right;
+		}
+
+		.application-form {
+			width: 86%;
+		}
+
+		.application-form .block > p,
+		.application-form .block.textarea.half > p {
+			width: 100%;
+			margin: 0 0 10px 0;
+		}
+			.application-form .block > p:last-child,
+			.application-form .block.textarea.half > p:last-child {
+				width: 100%;
+				margin: 0 0 10px 0;
+			}
+
+			.application-form .block#address p.city {
+				width: 100%;
+			}
+
+			.application-form .block#address p.province {
+				width: 100%;
+			}
+
+			.application-form .block#personal-info p.gender {
+				width: 100%;
+			}
+
+			.application-form .block#personal-info p.year,
+			.application-form .block#personal-info p.height,
+			.application-form .block#personal-info p.weight {
+				width: 100%;
+			}
+
+			.application-form .block#gear-info p {
+				width: 100%;
+			}
+
 	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -445,5 +673,6 @@ a:hover {
 		#splash-page p {
 			font-size: 24px;
 		}
+
 	}
 

@@ -15,7 +15,7 @@
 	<div class="containerWrapper">
 		<div class="header">
 			<div class="container">
-				<a href="#">Visit Current Site >></a>
+				<a href="http://www.mikeandmanny.org/about/" target="_blank">Visit Current Site >></a>
 			</div>
 		</div>
 		<?php 
@@ -30,8 +30,8 @@
 			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 			<div class="cta">
-				<a class="mandmBtn" id="applynow" href="#">Apply Now</a>
-				<a class="mandmBtn" href="#">For Coaches</a>
+				<a class="mandmBtn applynow" data-attr="athlete" href="#">Apply Now</a>
+				<a class="mandmBtn applynow" data-attr="coach" href="#">For Coaches</a>
 			</div>
 		</div>
 		<?php endwhile; ?>
@@ -49,9 +49,9 @@
 				</div>
 				<div class="colophon social">
 					<h3>Follow us</h3>
-					<p class="contact"><a href="#" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></p>
-					<p class="contact"><a href="#" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></p>
-					<p class="contact"><a href="#" target="_blank"><i class="fa fa-vimeo-square"></i>Vimeo</a></p>
+					<p class="contact"><a href="https://twitter.com/mikeandmanny" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></p>
+					<p class="contact"><a href="https://www.facebook.com/mikeandmanny" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></p>
+					<p class="contact"><a href="http://vimeo.com/mikeandmanny" target="_blank"><i class="fa fa-vimeo-square"></i>Vimeo</a></p>
 				</div>
 			</div>
 			<div class="footerRight">
@@ -63,9 +63,15 @@
 
 	<!-- inline application form -->
 	<div class="container app">
-		<div id="application-form">
+		<div class="application-form" id="athlete">
+			<span class="closeX">X</span>
 			<h2>Athlete application</h2>
 			<?php echo apply_filters('the_content', get_post_meta($post->ID, 'application-form', true)); ?>
+		</div>
+		<div class="application-form" id="coach">
+			<span class="closeX">X</span>
+			<h2>Coaches Submission Form</h2>
+			<?php echo apply_filters('the_content', get_post_meta($post->ID, 'coach-form', true)); ?>
 		</div>
 	</div>
 </div>
