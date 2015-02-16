@@ -10,6 +10,8 @@
 (function($){
 	$(document).ready(function(){
 
+		$('.application-form select').fancySelect();
+
 		$('.applynow').each(function(){
 
 			$(this).click(function(){

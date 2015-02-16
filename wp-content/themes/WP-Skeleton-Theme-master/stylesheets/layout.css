@@ -98,6 +98,10 @@
 
 }
 
+html, body {
+	margin: 0 !important;
+}
+
 
 h1, h2, h3 {
 	text-transform: uppercase;
@@ -137,8 +141,14 @@ a:hover {
 	text-decoration: underline;
 }
 
+input {
+	 -webkit-appearance: none;
+	 border-radius: 0 !important;
+}
+
 textarea {
 	resize:none;
+	border-radius: 0 !important;
 }
 
 input[type="submit"], input[type="file"] {
@@ -199,6 +209,16 @@ input[type="submit"], input[type="file"] {
 /* sticky footer bits*/
 #splash-page {
 	height: 100%;
+}
+
+#splash-page .logo {
+	width: 100%;
+	text-align: center;
+	margin: -50px 0 -25px;
+}
+
+#splash-page .logo img {
+	width: 170px;
 }
 
 #splash-page .containerWrapper {
@@ -402,8 +422,8 @@ input[type="submit"], input[type="file"] {
 	.application-form .closeX {
 		display: block;
 		position: absolute;
-		top: 40px;
-		right: 40px;
+		top: 30px;
+		right: 20px;
 		font-size: 24px;
 		color: #234384;
 		font-family: 'langdonregular';
@@ -533,6 +553,35 @@ input[type="submit"], input[type="file"] {
 		margin-bottom: 5px;
 	}
 
+	.application-form .form-pager {
+		width: 100%;
+		text-align: center;
+		margin-top: -35px;
+		font-family: 'langdonregular';
+		font-size: 18px;
+		letter-spacing: 0.08em;
+	}
+
+	.application-form #page-one .form-pager{
+		text-align: left;
+	}
+
+	.application-form #page-three .form-pager{
+		text-align: right;
+	}
+
+	div.wpcf7-response-output {
+		border: none !important;
+		text-align: center;
+	}
+
+	/*div.wpcf7 .screen-reader-response {
+		clip: auto !important;
+		width: auto !important;
+		height: auto !important;
+	}*/
+
+
 /* #Page Styles
 ================================================== */
 
@@ -572,6 +621,10 @@ input[type="submit"], input[type="file"] {
 	@media only screen and (max-width: 767px) {
 		#splash-page {
 			height: auto;
+		}
+
+		#splash-page .header a {
+			display: none;
 		}
 
 		#splash-page .containerWrapper {
@@ -651,6 +704,11 @@ input[type="submit"], input[type="file"] {
 				width: 100%;
 			}
 
+			div.fancy-select div.trigger {
+				padding: 15px 8% 9px 4%;
+				width: 88%;
+			}
+
 	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -659,7 +717,7 @@ input[type="submit"], input[type="file"] {
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
 		#splash-page .container {
-			margin-bottom: 50px;
+			/*margin-bottom: 50px;*/
 		}
 
 		#splash-page .cta {

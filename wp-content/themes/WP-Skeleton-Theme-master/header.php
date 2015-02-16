@@ -38,6 +38,7 @@
 	<!-- Stylesheets
 	================================================== -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/stylesheets/fancySelect.css">
 
 <?php wp_head(); ?>
 <script type='text/javascript' src='/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.40.0-2013.08.13'></script>

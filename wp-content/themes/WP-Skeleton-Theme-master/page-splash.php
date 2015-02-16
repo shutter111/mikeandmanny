@@ -5,6 +5,7 @@
  */
 	wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' );
 	wp_enqueue_script( 'bpopup', get_template_directory_uri().'/js/jquery.bpopup.min.js', 'jquery' );
+	wp_enqueue_script( 'fancySelect', get_template_directory_uri().'/js/fancySelect.js', 'jquery' );
 	wp_enqueue_script( 'splashjs', get_template_directory_uri().'/js/splash.js', 'bpopup' );
 	/*
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -18,6 +19,7 @@
 				<a href="http://www.mikeandmanny.org/about/" target="_blank">Visit Current Site >></a>
 			</div>
 		</div>
+		<div class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/final-logo.png" alt="Mike &amp; Manny Foundation"></div>
 		<?php 
 		 	
 		    while ( have_posts() ) : the_post();
@@ -45,7 +47,7 @@
 					<h3>Contact us</h3>
 					<address>BC Alpine Ski Association<br>403 - 1788 W Broadway Vancouver, BCV6J 1Y1</address>
 					<p class="contact phone">1.123.456.7890</p>
-					<p class="contact email"><a href="mailto:info@mikeandmanny.org">info@mikeandmanny.org</a></p>
+					<p class="contact email"><a href="mailto:camp@mikeandmanny.org">camp@mikeandmanny.org</a></p>
 				</div>
 				<div class="colophon social">
 					<h3>Follow us</h3>
