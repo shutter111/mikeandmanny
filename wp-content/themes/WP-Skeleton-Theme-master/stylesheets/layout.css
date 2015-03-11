@@ -98,8 +98,13 @@
 
 }
 
+/*
+	yellow: #e7e930;
+*/
+
 html, body {
 	margin: 0 !important;
+	font-size:16px;
 }
 
 
@@ -141,6 +146,16 @@ a:hover {
 	text-decoration: underline;
 }
 
+p {
+	line-height: 1.2em;
+	font-family: 'klinic_slablight';
+	color: #313131;
+}
+
+ul, ol {
+	list-style: none;
+}
+
 input {
 	 -webkit-appearance: none;
 	 border-radius: 0 !important;
@@ -174,140 +189,116 @@ input[type="submit"], input[type="file"] {
 	border: none;
 }
 
-.mandmBtn:hover {
-	opacity: .8;
-}
+	.mandmBtn:hover {
+		opacity: .8;
+	}
 
-.mandmBtn.sub {
-	background: #313131;
-	color: #fff;
-	font-size: 18px;
-	padding: 15px 20px;
-}
+	.mandmBtn.sub {
+		background: #313131;
+		color: #fff;
+		font-size: 18px;
+		padding: 15px 20px;
+	}
 
-.mandmBtn.prev,
-.mandmBtn.next {
-	max-width: 40%;
-	margin-top: 10px;
-}
+	.mandmBtn.prev,
+	.mandmBtn.next {
+		max-width: 40%;
+		margin-top: 10px;
+	}
 
-.mandmBtn.prev {
-	float: left;
-}
+	.mandmBtn.prev {
+		float: left;
+	}
 
-.mandmBtn.next {
-	float: right;
-}
+	.mandmBtn.next {
+		float: right;
+	}
 
 .clear {
 	clear: both;
 	height: 0;
 }
 
-/* splash page */
-
 /* sticky footer bits*/
-#splash-page {
+#pageContainer {
 	height: 100%;
 }
+	.containerWrapper {
+		min-height: 100%;
+		margin: 0 auto -272px;
+	}
+	.push {
+		height: 272px;
+	}
 
-#splash-page .logo {
-	width: 100%;
-	text-align: center;
-	margin: -50px 0 -25px;
-}
-
-#splash-page .logo img {
-	width: 170px;
-}
-
-#splash-page .containerWrapper {
-	min-height: 100%;
-	margin: 0 auto -272px;
-}
-.push {
-	height: 272px;
-}
-#splash-page .footer  {
+.footer  {
 	height: 265px;
 	background: url('../images/footerbg.jpg') no-repeat center top #234384;
 	background-size: cover;
 	border-top: 7px solid #172b56;
 }
 
-#splash-page a {
-	text-decoration: none;
-}
-
-#splash-page a:hover {
-	text-decoration: underline;
-}
-
-#splash-page .header {
+.header {
 	width: 100%;
-    height:60px;
+    height:75px;
     border-bottom:  7px solid #4061a3;
     clear: both;
     background: #234384;
-    text-align: right;
+    text-align: center;
 }
 
-	#splash-page .header a {
-		color: #fff;
-		text-transform: uppercase;
-		font-size: 15px;
-		font-family: 'klinic_slablight_italic';
-		line-height: 60px;
-		letter-spacing: 0.05em;
+#global {
+	padding: 30px 0 0 0;
+}
+	#global ul {
+		font-size: 0;
 	}
+		#global li {
+			display: inline-block;
+			margin: 0 10px;
+			font-size: 1rem;
+			font-family: 'klinic_slablight';
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
 
-#splash-page .containerWrapper > .container {
+			#global li a {
+				color: #fff;
+				transition: all .3 linear;
+			}
+
+			#global li a:hover{
+				color: #e7e930;
+				text-decoration: none;
+			}
+
+.containerWrapper > .container {
 	margin: 50px auto 100px;
 }
-#splash-page h1 {
-	text-transform: uppercase;
-	font-size: 119px;
-	line-height: 0.9em;
-	font-family: 'langdonregular';
-	color: #313131;
-}
-#splash-page h1:after {
-	content: "";
-	display: block;
-	height: 10px;
-	width: 10%;
-	background: #e7e930;
-	margin-top: 8px;
-}
-#splash-page .banner {
+
+.banner {
 	margin-bottom: 20px;
 }
-#splash-page .banner > img {
-	border-bottom: 10px solid #234384;
-}
+	.banner > img {
+		border-bottom: 10px solid #234384;
+	}
 
-#splash-page p {
-	margin-top: 40px;
-	font-size: 32px;
-	line-height: 1.2em;
-	font-family: 'klinic_slablight';
-	color: #313131;
-}
 
-#splash-page .cta {
+.cta {
 	text-align: center;
 	margin-top: 70px;
 }
-#splash-page .cta .mandmBtn {
-	margin: 0 10px;
-}
+	.cta .mandmBtn {
+		margin: 0 10px;
+	}
+
 
 /* Footer */
-#splash-page .footer .container {
+.footer .container {
 	padding-top: 50px;
 }
 
-#splash-page .footer h3 {
+.footer h3 {
 	text-transform: uppercase;
 	font-size: 24px;
 	line-height: 0.9em;
@@ -316,7 +307,7 @@ input[type="submit"], input[type="file"] {
 	margin-bottom: 0.68em;
 }
 
-#splash-page .footer h3:after {
+.footer h3:after {
 	content: "";
 	display: block;
 	height: 5px;
@@ -325,8 +316,8 @@ input[type="submit"], input[type="file"] {
 	margin-top: 8px;
 }
 
-#splash-page .footer .footerLeft,
-#splash-page .footer .footerRight {
+.footer .footerLeft,
+.footer .footerRight {
 	display: inline-block;
 	width: 48%;
 	vertical-align: middle;
@@ -342,8 +333,8 @@ input[type="submit"], input[type="file"] {
 			margin: 0 0 0 3%;
 		}
 
-	#splash-page .footer .colophon address, 
-	#splash-page .footer .colophon p.contact {
+	.footer .colophon address, 
+	.footer .colophon p.contact {
 		color: #fff;
 		font-family: 'klinic_slablight';
 		font-size: 16px;
@@ -351,51 +342,51 @@ input[type="submit"], input[type="file"] {
 		line-height: 1.25em;
 	}
 
-	#splash-page .footer .colophon address {
+	.footer .colophon address {
 		margin-bottom: 10px;
 	}
 
-	#splash-page .footer .colophon.social p.contact {
+	.footer .colophon.social p.contact {
 		font-size: 18px;
 		line-height: 1.7em;
 	}
-		#splash-page .footer .colophon .fa {
+		.footer .colophon .fa {
 			width: 25px;
 		}
 
-		#splash-page .footer .colophon a {
+		.footer .colophon a {
 			color: #e7e930;
 			font-family: 'klinic_slabbook_italic';
 		}
-			#splash-page .footer .colophon a:hover {
+			.footer .colophon a:hover {
 				text-decoration: underline;
 			}
 
-		#splash-page .footer .colophon.social a {
+		.footer .colophon.social a {
 			color: #ffffff;
 			font-family: 'klinic_slablight';
 		}
 			
 				
-
-#splash-page .footer .footerRight {
+.footer .footerRight {
 	text-align: right;
 }
-	#splash-page .footer .footerRight p {
+	.footer .footerRight p {
 		color: #fff;
 		font-size: 14px;
 		margin:0 0 10px 0;
 	}
 
-		#splash-page .footer .footerRight p.madeBy {
+		.footer .footerRight p.madeBy {
 			font-family: 'geared_slabthin';
 			text-transform: uppercase;
 		}
-		#splash-page .footer .footerRight p.madeBy strong {
+		.footer .footerRight p.madeBy strong {
 			font-weight: normal;
 			font-family: 'geared_slabextrabold';
 			color: #fff;
 		}
+
 
 /*application form*/
 .b-modal {
@@ -575,11 +566,6 @@ input[type="submit"], input[type="file"] {
 		text-align: center;
 	}
 
-	/*div.wpcf7 .screen-reader-response {
-		clip: auto !important;
-		width: auto !important;
-		height: auto !important;
-	}*/
 
 
 /* #Page Styles
@@ -590,23 +576,26 @@ input[type="submit"], input[type="file"] {
 
 	/* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (max-width: 959px) {
-		#splash-page .container {
+
+		h1 {
+			font-size: 85px;
+		}
+
+		.container {
 			width: 92%;
 		}
+
 		.mandmBtn {
 			display: block;
 		}
-		#splash-page .cta .mandmBtn {
-			margin: 0 10px 20px;
-		}
 
-		input[type="submit"].mandmBtn {
-			width: 100%;
-		}
+			.cta .mandmBtn {
+				margin: 0 10px 20px;
+			}
 
-		#splash-page h1 {
-			font-size: 85px;
-		}
+			input[type="submit"].mandmBtn {
+				width: 100%;
+			}
 
 		.application-form .closeX {
 			top: 30px;
@@ -619,15 +608,16 @@ input[type="submit"], input[type="file"] {
 
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
-		#splash-page {
+		#pageContainer {
 			height: auto;
 		}
 
-		#splash-page .header a {
-			display: none;
+		h1 {
+			font-size: 75px;
 		}
 
-		#splash-page .containerWrapper {
+		/* remove sticky footer stuff */
+		.containerWrapper {
 			min-height: none;
 			margin: 0;
 		}
@@ -635,33 +625,27 @@ input[type="submit"], input[type="file"] {
 			height: auto;
 			display: none;;
 		}
-		#splash-page .footer  {
+		.footer  {
 			height: auto;
 			padding: 50px 0;
 		}
-		#splash-page .footer .container {
-			padding-top: 0;
-			margin-bottom: 0;
-		}
-		#splash-page h1 {
-			font-size: 75px;
-		}
+			.footer .container {
+				padding-top: 0;
+				margin-bottom: 0;
+			}
 
-		#splash-page .footer .footerLeft,
-		#splash-page .footer .footerRight {
-			display: block;
-			width: 100%;
-		}
+			.footer .footerLeft,
+			.footer .footerRight {
+				display: block;
+				width: 100%;
+			}
 
-		#splash-page .footer .footerRight {
-			text-align: left;
-			margin: 30px 0 20px;
-		}
+			.footer .footerRight {
+				text-align: left;
+				margin: 30px 0 20px;
+			}
 
-		.footer .colophon {
-
-		}
-
+		/*application form*/
 		.application-form .closeX {
 			top: 20px;
 			text-align: right;
@@ -716,20 +700,17 @@ input[type="submit"], input[type="file"] {
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
-		#splash-page .container {
-			/*margin-bottom: 50px;*/
-		}
 
-		#splash-page .cta {
-			margin-top: 30px;
-		}
-
-		#splash-page h1 {
+		h1 {
 			font-size: 45px;
 		}
 
-		#splash-page p {
+		p {
 			font-size: 24px;
+		}
+
+		.cta {
+			margin-top: 30px;
 		}
 
 	}

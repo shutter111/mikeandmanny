@@ -52,6 +52,21 @@ var _wpcf7 = {"loaderUrl":"\/wp-content\/plugins\/contact-form-7\/images\/ajax-l
 
 <body <?php body_class(); ?>><!-- the Body  -->
 
+	<div id="pageContainer">
+		<div class="containerWrapper">
 
-<!-- <div class="container"> -->
-
+			<header class="header">
+				<div class="container">
+					<nav id="global">
+						<ul>
+							<?php wp_nav_menu( array( 
+													'theme_location' => 'primary',
+													'container' => false,
+													'items_wrap' => '%3$s'
+												) 
+											); 
+							?>
+						</ul>
+					</nav>
+				</div>
+			</header>
