@@ -4,6 +4,7 @@
  * @subpackage WP-Skeleton
  */
 ?>
+		<?php get_template_part( 'templates/section-sponsors' ); ?>
 		<div class="push"></div>
 	</div> <!-- containerWrapper -->
 
