@@ -100,6 +100,7 @@
 
 /*
 	yellow: #e7e930;
+	blue: rgb(35,67,132) / #234384;
 */
 
 html, body {
@@ -305,12 +306,99 @@ input[type="submit"], input[type="file"] {
 		margin: 0 10px;
 	}
 
+
+/*Sections*/	
+
 .section {
+	width: 100%;
 	text-align: center;
+	margin-top: 60px;
 }
 	.section h1 {
 		font-size: 2.375rem; /*38*/
 	}
+
+
+/*Sponsors*/
+#sponsors {
+
+}
+	#sponsors .sectionWrapper {
+		position: relative;
+		background: rgba(35,67,132,.1);
+		border-top: 7px solid #234384;
+		padding: 30px 0;
+		margin: 40px 0 0 0;
+	}
+		#sponsors .pager {
+			position: absolute;
+			top: -79px; /*padidng 30 + border 7 + height 42*/
+			right: 0;
+			width: 90px;
+			height: 42px;
+			font-size: 0;
+		}
+
+			#sponsors .pager > div {
+				width: 42px;
+				height: 42px;
+				background: #345496;
+				color: #fff;
+				display: inline-block;
+
+				transition: all .3s linear;
+			}
+				#sponsors .pager > div:first-child {
+					margin-right: 1px;
+				}
+				#sponsors .pager > div:hover {
+					background: #234384;
+				}
+
+				#sponsors .pager > div a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					color: #fff;
+					font-size: 1.25rem;
+					line-height: 42px;
+					font-family: FontAwesome;
+					position: relative;
+				}
+					#sponsors .pager > div a.bx-prev:after {
+						content: "\f104";
+						position: absolute;
+						top:0;
+						left: 0;
+						width: 100%;
+						text-align: center;
+					}
+					#sponsors .pager > div a.bx-next:after {
+						content: "\f105";
+						position: absolute;
+						top:0;
+						left: 0;
+						width: 100%;
+						text-align: center;
+					}
+
+		#sponsors figure {
+			background: #fff;
+			border: 1px solid #cfd2d7;
+			width: 220px;
+			height: 220px;
+			text-align: center;
+		}
+		#sponsors figure:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+			#sponsors figure img {
+				display: inline-block;
+  				vertical-align: middle;
+			}
 
 
 /* Footer */
@@ -587,6 +675,9 @@ input[type="submit"], input[type="file"] {
 	}
 
 
+		
+
+
 
 /* #Page Styles
 ================================================== */
@@ -711,6 +802,10 @@ input[type="submit"], input[type="file"] {
 			div.fancy-select div.trigger {
 				padding: 15px 8% 9px 4%;
 				width: 88%;
+			}
+
+			#sponsors .pager {
+				display: none;
 			}
 
 	}
