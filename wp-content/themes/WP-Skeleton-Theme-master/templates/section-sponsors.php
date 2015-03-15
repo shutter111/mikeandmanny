@@ -2,6 +2,12 @@
 	//global $post;
 	//$post = $wp_query->post;
 	$sponsors = get_field('sponsors');
+	$frontpage_ID = get_option('page_on_front');
+
+	if(!$sponsors){
+		$sponsors = get_field('sponsors', $frontpage_ID);
+	}
+
 
 	if($sponsors){
 ?>
@@ -27,6 +33,12 @@
 <?php 
 
 					endforeach;
+	
+
+?>
+
+
+<?php 
 
 	if($sponsors){
 ?>
