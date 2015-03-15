@@ -316,7 +316,7 @@ input[type="submit"], input[type="file"] {
 			}
 
 .containerWrapper > .container {
-	margin: 50px auto 100px;
+	/*margin: 50px auto 100px;*/
 }
 
 .banner {
@@ -334,6 +334,66 @@ input[type="submit"], input[type="file"] {
 		text-align: center;
 		margin: 50px 0;
 	}
+
+
+
+.pager {
+	position: absolute;
+	width: 90px;
+	height: 42px;
+	font-size: 0;
+}
+
+	.pager > div {
+		width: 42px;
+		height: 42px;
+		display: inline-block;
+
+		transition: all .3s linear;
+	}
+		.pager > div:first-child {
+			margin-right: 1px;
+		}
+		.pager > div:hover {
+			background: #234384;
+		}
+
+		.pager > div a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			background: #345496;
+			font-size: 1.25rem;
+			line-height: 42px;
+			font-family: FontAwesome;
+			position: relative;
+		}
+		.pager.yellow > div a {
+			background: #e7e930;
+			color: #333;
+		}
+
+			.pager > div a.bx-prev:after {
+				content: "\f104";
+				position: absolute;
+				top:0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+			}
+			.pager > div a.bx-next:after {
+				content: "\f105";
+				position: absolute;
+				top:0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+			}
+
+			.pager > div a.disabled {
+				display: none;
+			}
 
 
 
@@ -417,59 +477,9 @@ input[type="submit"], input[type="file"] {
 		margin: 40px 0 0 0;
 	}
 		#sponsors .pager {
-			position: absolute;
 			top: -79px; /*padidng 30 + border 7 + height 42*/
 			right: 0;
-			width: 90px;
-			height: 42px;
-			font-size: 0;
 		}
-
-			#sponsors .pager > div {
-				width: 42px;
-				height: 42px;
-				display: inline-block;
-
-				transition: all .3s linear;
-			}
-				#sponsors .pager > div:first-child {
-					margin-right: 1px;
-				}
-				#sponsors .pager > div:hover {
-					background: #234384;
-				}
-
-				#sponsors .pager > div a {
-					display: block;
-					width: 100%;
-					height: 100%;
-					color: #fff;
-					background: #345496;
-					font-size: 1.25rem;
-					line-height: 42px;
-					font-family: FontAwesome;
-					position: relative;
-				}
-					#sponsors .pager > div a.bx-prev:after {
-						content: "\f104";
-						position: absolute;
-						top:0;
-						left: 0;
-						width: 100%;
-						text-align: center;
-					}
-					#sponsors .pager > div a.bx-next:after {
-						content: "\f105";
-						position: absolute;
-						top:0;
-						left: 0;
-						width: 100%;
-						text-align: center;
-					}
-
-					#sponsors .pager > div a.disabled {
-						display: none;
-					}
 
 		#sponsors figure {
 			background: #fff;
@@ -488,6 +498,68 @@ input[type="submit"], input[type="file"] {
 				display: inline-block;
   				vertical-align: middle;
 			}
+
+
+.mini-carousel-wrapper {
+	position: relative;
+}
+
+.mini-carousel-wrapper:after {
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+	.mini-carousel-wrapper .pager {
+		left: 0;
+		top: -42px;
+	}
+
+	.mini-carousel {
+		width: 98%;
+		float:right;
+		margin: 0;
+	}
+		.mini-carousel li {
+			width: 100%;
+			display: table;
+		}
+
+			.mini-carousel li .text,
+			.mini-carousel li .image {
+				display: table-cell;
+			}
+
+			.mini-carousel li .text {
+				width: 30%;
+				padding: 40px 4% 60px;
+				background: url('../images/mini-carousel-text-bg.jpg') no-repeat center bottom #234384;
+				background-size: cover;
+			}
+			.mini-carousel li .image {
+				width: 62%;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+			}
+
+
+				.mini-carousel li .text h3,
+				.mini-carousel li .text p {
+					color: #fff;
+				}
+
+				.mini-carousel li .text h3 {
+					font-family: 'langdonregular';
+					text-transform: none;
+					font-size: 2.75rem;
+				}
+				.mini-carousel li .text p {
+					margin-bottom: 30px;
+				}
+
 
 
 #ski-camp-details {

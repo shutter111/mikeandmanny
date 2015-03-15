@@ -10,8 +10,8 @@ $(document).ready(function(){
 			slideMargin: 18,
 			infiniteLoop: false,
 			pager: false,
-			prevSelector: $('.pager .left'),
-			nextSelector: $('.pager .right'),
+			prevSelector: $('#sponsors-pager .left'),
+			nextSelector: $('#sponsors-pager .right'),
 			nextText: '',
 			prevText: ''
 		});
@@ -25,8 +25,8 @@ $(document).ready(function(){
 			slideMargin: 18,
 			infiniteLoop: false,
 			pager: false,
-			prevSelector: $('.pager .left'),
-			nextSelector: $('.pager .right'),
+			prevSelector: $('#sponsors-pager .left'),
+			nextSelector: $('#sponsors-pager .right'),
 			nextText: '',
 			prevText: ''
 		});
@@ -44,8 +44,8 @@ $(document).ready(function(){
 				slideMargin: 18,
 				infiniteLoop: false,
 				pager: false,
-				prevSelector: $('.pager .left'),
-				nextSelector: $('.pager .right'),
+				prevSelector: $('#sponsors-pager .left'),
+				nextSelector: $('#sponsors-pager .right'),
 				nextText: '',
 				prevText: ''
             });
@@ -59,8 +59,8 @@ $(document).ready(function(){
 				slideMargin: 18,
 				infiniteLoop: false,
 				pager: false,
-				prevSelector: $('.pager .left'),
-				nextSelector: $('.pager .right'),
+				prevSelector: $('#sponsors-pager .left'),
+				nextSelector: $('#sponsors-pager .right'),
 				nextText: '',
 				prevText: ''
 			});

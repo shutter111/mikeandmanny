@@ -16,7 +16,7 @@
 
 			<div class="sectionWrapper">
 				<div class="container">
-					<div class="pager">
+					<div class="pager" id="sponsors-pager">
 						<div class="left"></div>
 						<div class="right"></div>
 					</div>

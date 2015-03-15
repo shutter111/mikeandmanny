@@ -78,6 +78,7 @@
 		maxSlides: 1,
 		moveSlides: 0,
 		slideWidth: 0,
+		slideHeight: 0,
 
 		// CALLBACKS
 		onSliderLoad: function(){ return true },
@@ -130,6 +131,8 @@
 			slider.settings = $.extend({}, defaults, options);
 			// parse slideWidth setting
 			slider.settings.slideWidth = parseInt(slider.settings.slideWidth);
+			// parse slideHeight setting
+			slider.settings.slideHeight = parseInt(slider.settings.slideHeight);
 			// store the original children
 			slider.children = el.children(slider.settings.slideSelector);
 			// check if actual number of slides is less than minSlides / maxSlides
@@ -1478,7 +1481,12 @@
 			// resize all children in ratio to new screen size
 			slider.children.add(el.find('.bx-clone')).outerWidth(getSlideWidth());
 			// adjust the height
-			slider.viewport.css('height', getViewportHeight());
+			if(slider.settings.slideHeight == 0){
+				slider.viewport.css('height', getViewportHeight());
+			}else {
+				slider.viewport.css('height', slider.settings.slideHeight);
+			}
+			
 			// update the slide position
 			if(!slider.settings.ticker) { setSlidePosition(); }                 
 			// if active.last was true before the screen resize, we want
