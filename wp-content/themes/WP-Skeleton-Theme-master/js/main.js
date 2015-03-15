@@ -69,4 +69,6 @@ $(document).ready(function(){
 
 	});
 
+	//mini carousel
+
 });

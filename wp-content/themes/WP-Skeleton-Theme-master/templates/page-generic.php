@@ -19,7 +19,6 @@
 		<div class="content-area">
 			<?php echo $secondary_title ? '<h2>'.$secondary_title.'</h2>' : ''; ?>
 			<?php echo $page_intro ? $page_intro : ''; ?>
-			<!--<h3>Our goal</h3> -->
 		</div>
 
 	</div>

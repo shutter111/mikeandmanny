@@ -57,12 +57,6 @@
 
 						endwhile; 
 					?>
-						<!--<article class="team-member">
-							<figure></figure>
-							<h1>Mike Janyk</h1>
-							<p></p>
-							<a href="#" class="mandmBtn" target="_blank">More about Mike</a>
-						</article>-->
 					</div>
 				</section>
 
