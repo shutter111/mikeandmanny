@@ -115,6 +115,7 @@ h1, h2, h3 {
 	color: #313131;
 	line-height: 1.2em;
 	font-weight: normal;
+	 -webkit-font-smoothing: antialiased;
 }
 
 h3 {
@@ -502,6 +503,7 @@ input[type="submit"], input[type="file"] {
 
 .mini-carousel-wrapper {
 	position: relative;
+	margin-top: 100px;
 }
 
 .mini-carousel-wrapper:after {
@@ -533,13 +535,13 @@ input[type="submit"], input[type="file"] {
 			}
 
 			.mini-carousel li .text {
-				width: 30%;
-				padding: 40px 4% 60px;
+				width: 240px; /*30%*/
+				padding: 40px 40px 60px;
 				background: url('../images/mini-carousel-text-bg.jpg') no-repeat center bottom #234384;
 				background-size: cover;
 			}
 			.mini-carousel li .image {
-				width: 62%;
+				width: 630px;/*62%*/
 				background-repeat: no-repeat;
 				background-position: center center;
 				background-size: cover;
@@ -963,13 +965,25 @@ input[type="submit"], input[type="file"] {
 			display: block;
 		}
 
-			.cta .mandmBtn {
-				margin: 0 10px 20px;
+		.cta {
+			width: 90%;
+			margin: 0 auto;
+		}
+			.cta.center {
+				margin: 50px auto;
 			}
 
 			input[type="submit"].mandmBtn {
 				width: 100%;
 			}
+
+		.mini-carousel li .text {
+			padding: 30px 40px 40px;
+		}
+
+		.mini-carousel-wrapper {
+			margin-bottom: -15px;
+		}
 
 		.application-form .closeX {
 			top: 30px;
@@ -1035,6 +1049,15 @@ input[type="submit"], input[type="file"] {
 			display: block;
 			width: 100%;
 			margin-right: 0;
+		}
+
+
+		.mini-carousel li .text {
+			width: 100%;
+		}
+
+		.mini-carousel li .image {
+			display: none;
 		}
 
 		/*application form*/

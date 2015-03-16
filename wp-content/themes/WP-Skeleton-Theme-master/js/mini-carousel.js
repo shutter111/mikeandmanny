@@ -1,12 +1,7 @@
 $(document).ready(function(){
 
-	$(window).on('load', function(){
 
-
-		var outerH = ($('.mini-carousel li').height()) - 80;
-
-		$('.mini-carousel').bxSlider({
-			slideHeight: outerH,
+		var miniCarousel = $('.mini-carousel').bxSlider({
 			infiniteLoop: false,
 			pager: false,
 			prevSelector: $('#mini-carousel-pager .left'),
@@ -14,12 +9,5 @@ $(document).ready(function(){
 			nextText: '',
 			prevText: ''
 		});
-		
-	});
-
-	
-
-	//var outerH = $('.mini-carousel li').outerHeight();
-	//console.log(outerH);
 
 });
