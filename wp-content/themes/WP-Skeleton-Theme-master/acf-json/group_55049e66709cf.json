@@ -82,11 +82,13 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
-            },
+            }
+        ],
+        [
             {
-                "param": "page_type",
-                "operator": "!=",
-                "value": "front_page"
+                "param": "post_type",
+                "operator": "==",
+                "value": "ski-camp"
             }
         ]
     ],
@@ -102,5 +104,5 @@
         "comments",
         "author"
     ],
-    "modified": 1426366394
+    "modified": 1426569003
 }

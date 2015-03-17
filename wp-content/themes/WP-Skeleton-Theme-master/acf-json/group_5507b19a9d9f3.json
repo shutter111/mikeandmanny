@@ -1,0 +1,66 @@
+{
+    "key": "group_5507b19a9d9f3",
+    "title": "Singular Template",
+    "fields": [
+        {
+            "key": "field_5507b1a8e24ca",
+            "label": "Event Date",
+            "name": "event_date",
+            "prefix": "",
+            "type": "text",
+            "instructions": "i.e. January 7 - 11th, 2014",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5507b1f8e24cb",
+            "label": "Event Place",
+            "name": "event_place",
+            "prefix": "",
+            "type": "text",
+            "instructions": "i.e. Whistler, BC, Canada",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "ski-camp"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1426567699
+}

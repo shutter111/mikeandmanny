@@ -70,9 +70,9 @@
 
 <?php endwhile; endif; ?>
 
-			<div class="cta center">
+			<!--<div class="cta center">
 				<a class="mandmBtn applynow" data-attr="athlete" href="#">Apply Now</a>
-			</div>
+			</div>-->
 
 
 			<?php get_template_part( 'templates/section-mini-carousel' ); ?>

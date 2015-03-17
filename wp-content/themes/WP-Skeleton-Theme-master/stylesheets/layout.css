@@ -109,7 +109,7 @@ html, body {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	text-transform: uppercase;
 	font-family: 'langdonregular';
 	color: #313131;
@@ -182,11 +182,6 @@ textarea {
 
 input[type="submit"], input[type="file"] {
 	outline: none;
-}
-
-
-.banner > img {
-	border-bottom: 10px solid #234384;
 }
 
 .mandmBtn {
@@ -406,6 +401,9 @@ input[type="submit"], input[type="file"] {
 		position: relative;
 		height: 385px;
 	}
+	.home .main header {
+		height: 460px;
+	}
 		.main header:before {
 			content: '';
 			display: inline-block;
@@ -426,12 +424,45 @@ input[type="submit"], input[type="file"] {
 	  			left: -7%;
 	  			z-index: 100;
 			}
-			.single-ski-camp .main header h1 {
-				width: 25%;
+			.home .main header h1 {
+				font-size: 3.75rem;
+				width: 32%;
+				padding: 40px 6%;
+				line-height: 0.9em;
 			}
+			
 			.main header h1:after {
 				width: 23%;
 			}
+
+			.main hgroup {
+				background: #313131;
+				width: 25%;;
+				padding: 40px 4%;
+				line-height: 0.95em;
+
+				display: inline-block;
+	  			vertical-align: middle;
+	  			position: relative;
+	  			left: -7%;
+	  			z-index: 100;
+			}
+
+				.main hgroup h1 {
+					display: block;
+					left: auto;
+					width: auto;
+					padding: 0;
+				}
+
+				.main hgroup h4 {
+					color: #fff;
+					line-height: 1em;
+					margin: 15px 0 0 0;
+				}
+					.main hgroup h4 span {
+						display: block;
+					}
 
 			.main header .banner {
 				position: absolute;
