@@ -162,16 +162,9 @@
     "location": [
         [
             {
-                "param": "current_user",
+                "param": "user_role",
                 "operator": "==",
-                "value": "viewing_back"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "default"
+                "value": "administrator"
             }
         ]
     ],
@@ -181,5 +174,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1426150031
+    "modified": 1426575138
 }

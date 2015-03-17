@@ -12,7 +12,8 @@
 		<div class="container">
 			<div class="footerLeft">
 				<?php
-					$user_id = get_current_user_id();
+					//$user_id = get_current_user_id();
+					$user_id = 1;
 					$footer = get_field('contact_us', 'user_'.$user_id);
 					$social = get_field('social_links', 'user_'.$user_id);
 
