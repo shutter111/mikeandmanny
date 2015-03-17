@@ -1,8 +1,10 @@
 <?php
 	//global $post;
-	//$post = $wp_query->post;
-	$sponsors = get_field('sponsors');
+	$post = $wp_query->post;
+	$sponsors = get_field('sponsors', $post->ID);
 	$frontpage_ID = get_option('page_on_front');
+
+	//var_dump($post->ID);
 
 	if(!$sponsors){
 		$sponsors = get_field('sponsors', $frontpage_ID);

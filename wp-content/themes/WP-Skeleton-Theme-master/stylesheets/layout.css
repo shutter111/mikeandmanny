@@ -350,9 +350,7 @@ input[type="submit"], input[type="file"] {
 		.pager > div:first-child {
 			margin-right: 1px;
 		}
-		.pager > div:hover {
-			background: #234384;
-		}
+		
 
 		.pager > div a {
 			display: block;
@@ -364,11 +362,21 @@ input[type="submit"], input[type="file"] {
 			line-height: 42px;
 			font-family: FontAwesome;
 			position: relative;
+
+			transition: all .3s linear;
 		}
 		.pager.yellow > div a {
 			background: #e7e930;
 			color: #333;
+			opacity: 1;
 		}
+			.pager > div a:hover {
+				background: #234384;
+			}
+			.pager.yellow > div a:hover {
+				opacity: .8;
+				background: #e7e930;
+			}
 
 			.pager > div a.bx-prev:after {
 				content: "\f104";
