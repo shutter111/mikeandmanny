@@ -39,6 +39,13 @@
                 "operator": "!=",
                 "value": "front_page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "ski-camp"
+            }
         ]
     ],
     "menu_order": 0,
@@ -47,5 +54,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1426367956
+    "modified": 1426554601
 }

@@ -9,7 +9,19 @@
 	<div class="container">
 		<header>
 			
-			<?php echo $page_title ? '<h1>'.$page_title.'</h1>' : ''; ?>
+			<?php 
+				if($page_title){
+
+					echo '<h1>'.$page_title.'</h1>';
+
+				}else {
+					echo '<h1>';
+						the_title();
+					echo '</h1>';
+				}
+			?>
+
+
 			<?php if(has_post_thumbnail()): ?>
 				<figure class="banner"><?php the_post_thumbnail('full'); ?></figure>
 			<?php endif; ?>

@@ -426,6 +426,9 @@ input[type="submit"], input[type="file"] {
 	  			left: -7%;
 	  			z-index: 100;
 			}
+			.single-ski-camp .main header h1 {
+				width: 25%;
+			}
 			.main header h1:after {
 				width: 23%;
 			}
@@ -453,6 +456,8 @@ input[type="submit"], input[type="file"] {
 			width: 5%;
 			margin-top: 6px;
 		}
+
+
 
 /*Sections*/	
 

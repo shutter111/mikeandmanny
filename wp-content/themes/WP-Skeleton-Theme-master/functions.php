@@ -94,3 +94,12 @@ function ski_camp_init() {
     register_post_type( 'ski-camp', $args );
     flush_rewrite_rules();
 }
+
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if(is_singular('ski-camp') && $item->title == "Ski Camp"){ //Notice you can change the conditional from is_single() and $item->title
+             $classes[] = "current-menu-item";
+     }
+     return $classes;
+}
