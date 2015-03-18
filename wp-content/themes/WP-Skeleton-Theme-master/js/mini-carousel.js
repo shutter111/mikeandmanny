@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+	$(window).load(function(){
+
+		if($('.mini-carousel').is(':hidden')){
+			$('.mini-carousel').fadeIn(500);
+		}
+		
 
 		var miniCarousel = $('.mini-carousel').bxSlider({
 			infiniteLoop: false,
@@ -9,5 +15,8 @@ $(document).ready(function(){
 			nextText: '',
 			prevText: ''
 		});
+
+	});
+		
 
 });

@@ -12,12 +12,43 @@
 	<div class="container">
 		<header>
 			
-			<?php 
+			<?php if(is_front_page()): ?>
 
-				if($event_date || $event_place){
+				<div class="homeContainer">
+					<h1><?php echo $page_title; ?></h1>
+					<div class="cta"><a href="#" class="mandmBtn applynow">Donate Now</a></div>
+				</div>
+
+				<?php if(has_post_thumbnail()): ?>
+					<figure class="banner"><?php the_post_thumbnail('full'); ?></figure>
+				<?php endif; ?>
 
 
-					echo '<hgroup>';
+			<?php else: ?>
+
+				<?php 
+
+					if($event_date || $event_place){
+
+
+						echo '<hgroup>';
+
+							if($page_title){
+
+								echo '<h1>'.$page_title.'</h1>';
+
+							}else {
+								echo '<h1>';
+									the_title();
+								echo '</h1>';
+							}
+
+							echo '<h4><span>'.$event_date.'</span><span>'.$event_place.'</span></h4>';
+						echo '</hgroup>';
+
+
+					}else {
+
 
 						if($page_title){
 
@@ -28,32 +59,18 @@
 								the_title();
 							echo '</h1>';
 						}
-						
-						echo '<h4><span>'.$event_date.'</span><span>'.$event_place.'</span></h4>';
-					echo '</hgroup>';
 
 
-				}else {
-
-
-					if($page_title){
-
-						echo '<h1>'.$page_title.'</h1>';
-
-					}else {
-						echo '<h1>';
-							the_title();
-						echo '</h1>';
 					}
 
-
-				}
-
-			?>
+				?>
 
 
-			<?php if(has_post_thumbnail()): ?>
-				<figure class="banner"><?php the_post_thumbnail('full'); ?></figure>
+				<?php if(has_post_thumbnail()): ?>
+					<figure class="banner"><?php the_post_thumbnail('full'); ?></figure>
+				<?php endif; ?>
+
+
 			<?php endif; ?>
 
 		</header>
