@@ -66,6 +66,7 @@ var _wpcf7 = {"loaderUrl":"\/wp-content\/plugins\/contact-form-7\/images\/ajax-l
 												) 
 											); 
 							?>
+							<li><a href="https://app.etapestry.com/cart/SportBC/default/item.php?ref=1691.0.110200877" class="mandmBtn" target="_blank">Donate Now</a></li>
 						</ul>
 					</nav>
 				</div>

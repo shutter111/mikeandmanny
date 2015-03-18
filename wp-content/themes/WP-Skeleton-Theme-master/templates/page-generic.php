@@ -16,7 +16,7 @@
 
 				<div class="homeContainer">
 					<h1><?php echo $page_title; ?></h1>
-					<div class="cta"><a href="#" class="mandmBtn applynow">Donate Now</a></div>
+					<div class="cta"><a href="https://app.etapestry.com/cart/SportBC/default/item.php?ref=1691.0.110200877" class="mandmBtn applynow" target="_blank">Donate Now</a></div>
 				</div>
 
 				<?php if(has_post_thumbnail()): ?>

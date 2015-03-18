@@ -293,6 +293,12 @@ input[type="submit"], input[type="file"] {
 				text-decoration: none;
 			}
 
+			#global li a.mandmBtn {
+				padding: 12px 20px;
+				color: #333;
+				font-size: 1rem;
+			}
+
 		#global li.current-menu-item:after {
 			content: "";
 			width: 0; 
@@ -702,6 +708,55 @@ input[type="submit"], input[type="file"] {
 				margin: 10px 0 0 0;
 			}
 
+
+/*ski camp single*/
+.ski-camp-details {
+	
+}
+.ski-camp-details:nth-child(even) {
+	background: rgba(35,67,132,.1);
+	padding: 20px 0;
+	margin: 20px 0;
+}
+
+	#ski-camp-details .ski-camp-details .detail {
+		margin-bottom: 0;
+	}
+
+		#ski-camp-details .ski-camp-details .detail figure {
+			float: none;
+			display: inline-block;
+			vertical-align: middle;
+			width: 52%;
+		}
+		#ski-camp-details .ski-camp-details:nth-child(even) .detail figure {
+			margin-right: 0;
+			margin-left: 3%;
+		}
+		#ski-camp-details .ski-camp-details .detail figure.video {
+			position: relative;
+			text-align: center;
+		}
+			#ski-camp-details .ski-camp-details .detail figure.video:after {
+				content: "\f01d";
+				color: #fff;
+				font-size: 3.75rem;
+				font-family: "Fontawesome";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -10px 0 0 -30px
+			}
+
+		#ski-camp-details .ski-camp-details .detail .text {
+			display: inline-block;
+			vertical-align: middle;
+			width: 40%;
+		}
+
+		.vimeoVid {
+			display: none;
+		}
 
 #our-team {
 

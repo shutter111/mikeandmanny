@@ -1,9 +1,9 @@
 {
-    "key": "group_5505143fd8cdf",
-    "title": "Ski Camp",
+    "key": "group_55097ea254438",
+    "title": "Ski Camp Single",
     "fields": [
         {
-            "key": "field_5505144d929ed",
+            "key": "field_55097eeec6a74",
             "label": "Details",
             "name": "details",
             "prefix": "",
@@ -22,7 +22,7 @@
             "button_label": "Add Row",
             "sub_fields": [
                 {
-                    "key": "field_55051469929ee",
+                    "key": "field_55097eeec6a75",
                     "label": "Detail",
                     "name": "detail",
                     "prefix": "",
@@ -37,11 +37,11 @@
                     },
                     "min": "",
                     "max": "",
-                    "layout": "table",
+                    "layout": "row",
                     "button_label": "Add Row",
                     "sub_fields": [
                         {
-                            "key": "field_55051478929ef",
+                            "key": "field_55097eeec6a76",
                             "label": "Detail Title",
                             "name": "detail_title",
                             "prefix": "",
@@ -63,7 +63,7 @@
                             "disabled": 0
                         },
                         {
-                            "key": "field_55051485929f0",
+                            "key": "field_55097eeec6a77",
                             "label": "Detail Text",
                             "name": "detail_text",
                             "prefix": "",
@@ -85,7 +85,7 @@
                             "disabled": 0
                         },
                         {
-                            "key": "field_5505149d929f1",
+                            "key": "field_55097eeec6a78",
                             "label": "Detail Image",
                             "name": "detail_image",
                             "prefix": "",
@@ -108,77 +108,13 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "key": "field_550514c276c03",
-            "label": "Application Info",
-            "name": "application_info",
-            "prefix": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "min": "",
-            "max": 1,
-            "layout": "table",
-            "button_label": "Add Row",
-            "sub_fields": [
-                {
-                    "key": "field_550514d876c04",
-                    "label": "Info",
-                    "name": "info",
-                    "prefix": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "min": "",
-                    "max": 3,
-                    "layout": "table",
-                    "button_label": "Add Row",
-                    "sub_fields": [
-                        {
-                            "key": "field_550514fe76c05",
-                            "label": "Info Title",
-                            "name": "info_title",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
                         },
                         {
-                            "key": "field_5505150576c06",
-                            "label": "Info Text",
-                            "name": "info_text",
+                            "key": "field_5509830b72ef2",
+                            "label": "Video",
+                            "name": "video",
                             "prefix": "",
-                            "type": "textarea",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -187,13 +123,54 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "wpautop",
-                            "readonly": 0,
-                            "disabled": 0
+                            "min": "",
+                            "max": 1,
+                            "layout": "table",
+                            "button_label": "Add Row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5509831972ef3",
+                                    "label": "Video Thumb",
+                                    "name": "video_thumb",
+                                    "prefix": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5509832a72ef4",
+                                    "label": "Video URL",
+                                    "name": "video_url",
+                                    "prefix": "",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
+                                }
+                            ]
                         }
                     ]
                 }
@@ -203,9 +180,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "post_type",
                 "operator": "==",
-                "value": "2"
+                "value": "ski-camp"
             }
         ]
     ],
@@ -215,5 +192,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1426685694
+    "modified": 1426687366
 }
