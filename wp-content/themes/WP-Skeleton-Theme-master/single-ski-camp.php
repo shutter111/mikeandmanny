@@ -1,6 +1,6 @@
 <?php
 	wp_enqueue_script( 'bpopup', get_template_directory_uri().'/js/jquery.bpopup.min.js', array('jQuery'), false, true );
-	wp_enqueue_script( 'skiCampjs', get_template_directory_uri().'/js/ski-camp.js', array('jQuery', 'bpopup'), false, true );
+	wp_enqueue_script( 'skiCampjs', get_template_directory_uri().'/js/ski-camp.js', array('jQuery', 'bpopup', 'bxSliderjs'), false, true );
 
 	get_header();
 
