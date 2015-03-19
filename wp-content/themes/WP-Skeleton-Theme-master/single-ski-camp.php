@@ -47,9 +47,17 @@
 								<?php if(have_rows('video')): while(have_rows('video')): the_row();
 									$video_thumb = get_sub_field('video_thumb');
 									$video_url = get_sub_field('video_url');
-								?>
-										<figure class="video"><img src="<?php echo $video_thumb; ?>" alt=""></figure>
 
+									if($video_thumb && $video_url):
+								?>
+											<figure class="video" data-attr="video-<?php echo $i; ?>"><img src="<?php echo $video_thumb; ?>" alt=""></figure>
+
+											<div class="vimeoVid" id="video-<?php echo $i; ?>">
+												<div class="container videoWrapper">
+													<?php echo $video_url; ?>
+												</div>
+											</div>
+										<?php endif; ?>
 									<?php endwhile; ?>
 								<?php else: ?>
 									<?php echo $detail_image ? '<figure><img src="'.$detail_image.'" alt=""></figure>' : ''; ?>
@@ -64,9 +72,17 @@
 								<?php if(have_rows('video')): while(have_rows('video')): the_row();
 									$video_thumb = get_sub_field('video_thumb');
 									$video_url = get_sub_field('video_url');
-								?>
-										<figure class="video"><img src="<?php echo $video_thumb; ?>" alt=""></figure>
 
+									if($video_thumb && $video_url):
+								?>
+											<figure class="video" data-attr="video-<?php echo $i; ?>"><img src="<?php echo $video_thumb; ?>" alt=""></figure>
+
+											<div class="vimeoVid" id="video-<?php echo $i; ?>">
+												<div class="container videoWrapper">
+													<?php echo $video_url; ?>
+												</div>
+											</div>
+										<?php endif; ?>
 									<?php endwhile; ?>
 								<?php else: ?>
 									<?php echo $detail_image ? '<figure><img src="'.$detail_image.'" alt=""></figure>' : ''; ?>
@@ -84,9 +100,6 @@
 						</div>
 					</div>
 
-					<div class="vimeoVid">
-						<iframe src="https://player.vimeo.com/video/92169810" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/92169810">Mike and Manny&#039;s // Cowboy Camp 2014 Fundraiser</a> from <a href="https://vimeo.com/mikeandmanny">Mike &amp; Manny Foundation</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-					</div>
 
 				</div>
 
