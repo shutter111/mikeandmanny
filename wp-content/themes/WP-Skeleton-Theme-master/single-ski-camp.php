@@ -97,7 +97,7 @@
 
 							<?php endif; ?>
 
-						</div>
+						</div><!-- content area -->
 					</div>
 
 
@@ -113,6 +113,10 @@
 			</div>
 
 			<?php endwhile; endif; ?>
+
+			<div class="cta">
+				<a href="https://vimeo.com/mikeandmanny" class="mandmBtn applynow" target="_blank">View all videos</a>
+			</div>
 								
 
 <?php

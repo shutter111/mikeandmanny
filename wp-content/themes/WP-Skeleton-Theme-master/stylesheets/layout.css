@@ -719,6 +719,11 @@ input[type="submit"], input[type="file"] {
 	margin: 20px 0;
 }
 
+	.single-ski-camp .cta {
+		text-align: center;
+		margin-top: 50px;
+	}
+
 	#ski-camp-details .ski-camp-details .detail {
 		margin-bottom: 0;
 	}
@@ -736,7 +741,14 @@ input[type="submit"], input[type="file"] {
 		#ski-camp-details .ski-camp-details .detail figure.video {
 			position: relative;
 			text-align: center;
+			cursor: pointer;
+			opacity: 1;
+
+			transition: all .3s linear;
 		}
+			#ski-camp-details .ski-camp-details .detail figure.video:hover {
+				opacity: .9;
+			}
 			#ski-camp-details .ski-camp-details .detail figure.video:after {
 				content: "\f01d";
 				color: #fff;
