@@ -140,17 +140,18 @@ h2:after {
 	margin-top: 8px;
 }
 
-h1.center {
+h1.center, h2.center {
 	position: relative;
 	display: inline;
 }
-	h1.center:after {
+	h1.center:after, h2.center:after {
 		position: absolute;
 		top: 38px;
 		left: 0;
 		margin-top: 0;
 		width: 48px;
 	}
+
 
 a {
 	text-decoration: none;
@@ -541,6 +542,18 @@ input[type="submit"], input[type="file"] {
 		font-size: 2.375rem; /*38*/
 	}
 
+.sub-section {
+	text-align: center;
+	margin: 50px 0;
+}
+	.sub-section h2 {
+		font-size: 1.875rem;
+	}
+		.sub-section h2.center:after {
+			top: 33px;
+			width: 40px;
+		}
+
 
 /*Sponsors*/
 #sponsors {
@@ -637,6 +650,30 @@ input[type="submit"], input[type="file"] {
 				}
 				.mini-carousel li .text p {
 					margin-bottom: 30px;
+				}
+
+		.mini-carousel.slideshow li {
+			display: block;
+		}
+			.mini-carousel.slideshow li figure {
+				position: relative;
+				
+			}
+				.mini-carousel.slideshow li figure img {
+					width: 100%;
+
+				}
+				.mini-carousel.slideshow li figure figcaption {
+					position: absolute;
+					bottom: 3px;
+					right: 0;
+					width: 90%;
+					padding: 15px 5%;
+					background: rgba(35,67,132,.8);
+					color: #fff;
+					text-align: center;
+					font-family: 'klinic_slabbook';
+					font-size: 1.125rem;
 				}
 
 
@@ -785,6 +822,68 @@ input[type="submit"], input[type="file"] {
 
 			.vimeoVid p {
 				display: none !important;
+			}
+
+#athletes {
+	width: 100%;
+	margin-top: 50px;
+	font-size: 0;
+	text-align: center;
+}
+	
+
+	#athletes .athlete {
+		background: url('../images/placeholder.jpg') no-repeat center center #4061a3;
+		/*width: 10vw;
+		height: 10vw;*/
+		width: 192px;
+		height: 192px;
+
+		display: inline-block;
+		position: relative;
+	}
+
+		#athletes .athlete img {
+			width: 100%;
+			height: 100%;
+		}
+
+		#athletes .athlete .overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 96%;
+			height: 100%;
+			padding: 0 2%;
+
+			background: rgba(35,67,132,.8);
+			
+			text-align: center;
+			white-space: nowrap;
+
+			opacity: 0;
+
+			transition: opacity .3s linear;
+		}
+
+		#athletes .athlete .overlay:hover {
+			opacity: 1;
+		}
+
+		#athletes .athlete .overlay:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+
+			#athletes .athlete .overlay > span {
+				display: inline-block;
+  				vertical-align: middle;
+
+  				font-family: 'klinic_slabbook';
+				font-size: 1.125rem;
+				color: #fff;
 			}
 
 #our-team {

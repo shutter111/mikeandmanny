@@ -117,7 +117,66 @@
 			<div class="cta">
 				<a href="https://vimeo.com/mikeandmanny" class="mandmBtn applynow" target="_blank">View all videos</a>
 			</div>
-								
+
+
+			
+			<?php if(have_rows('slideshow')): while(have_rows('slideshow')): the_row(); ?>
+				
+				<div class="container mini-carousel-wrapper">
+
+					<?php if(have_rows('slide')): ?>
+					<div class="pager yellow" id="mini-carousel-pager">
+						<div class="left"></div>
+						<div class="right"></div>
+					</div>
+
+					<ul class="mini-carousel slideshow">
+
+						<?php while(have_rows('slide')): the_row();
+
+							$picture = get_sub_field('picture');
+							$caption = get_sub_field('caption');
+
+						?>
+
+							<li>
+								<figure><img src="<?php echo $picture; ?>" alt="<?php echo $caption; ?>"><figcaption><?php echo $caption; ?></figcaption></figure>
+							</li>
+
+						<?php endwhile; ?>
+
+					</ul>
+					<?php endif; ?>
+
+				</div>
+
+			<?php 
+
+				endwhile; endif; 
+			?>
+
+			<?php if(have_rows('athletes')): while(have_rows('athletes')): the_row(); ?>
+			<div class="sub-section">
+				<div class="container">
+					<h2 class="center">Athletes who attended:</h2>
+
+					<?php if(have_rows('athlete')): ?>
+					<div id="athletes">
+						<?php while(have_rows('athlete')): the_row();
+							$picture = get_sub_field('picture');
+							$name = get_sub_field('name');
+						?>
+							<div class="athlete">
+								<img src="<?php echo $picture; ?>" alt="<?php echo $name; ?>">
+								<div class="overlay"><span><?php echo $name; ?></span></div>
+							</div>
+						<?php endwhile; ?>
+						
+					</div>
+					<?php endif; ?>
+				</div>
+			</div>
+			<?php endwhile; endif; ?>				
 
 <?php
 
