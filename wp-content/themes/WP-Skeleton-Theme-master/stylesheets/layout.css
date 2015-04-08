@@ -167,9 +167,38 @@ p {
 	color: #313131;
 }
 
+p strong {
+	font-weight: 700;
+	font-family: 'klinic_slabbook';
+}
+
 ul, ol {
 	list-style: none;
 }
+
+blockquote {
+	background: #f6f6f6;
+	display: block;
+	text-align: center;
+	width: 80%;
+	padding: 40px 10%;
+	border: none;
+	margin: 60px 0;
+
+	text-transform: uppercase;
+	color: #313131;
+	font-size: 1.75rem;
+	font-family: 'langdonregular';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.25em;
+}
+
+	blockquote > span {
+		display: block;
+		color: #666666;
+		font-size: 0.75em;
+	}
 
 input {
 	 -webkit-appearance: none;
@@ -528,6 +557,70 @@ input[type="submit"], input[type="file"] {
 		padding: 60px 5% 50px 7%;
 		background: rgba(35,67,132,.1);
 	}
+
+/*Fundraisers*/
+#fundraisers .content-area figure{
+	float: right;
+	margin-left: 20px;
+}
+
+#fundraisers .content-area:after {
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+article.event {
+	text-align: left;
+	margin-top: 50px;
+}
+	article.event figure {
+		width: 32%;
+		float: left;
+		margin-right: 3%;
+	}
+	article.event h1 {
+		font-size: 1.875rem;
+	}
+	article.event h1:after {
+		display: none;
+	}
+	article.event p {
+		margin: 5px 0;
+	}
+
+.tickets {
+	margin-top: 50px;
+	font-size: 0;
+}
+	.tickets .option {
+		display: inline-block;
+		width: 44%;
+		padding: 0 3%;
+		text-align: center;
+		box-sizing:border-box;
+		vertical-align: middle;
+	}
+	.tickets .option:first-child {
+		border-right: 1px solid #d7d7d7;
+	}
+		.tickets .option table {
+			margin: 0 auto;
+			margin-top: -20px;
+			width: 90%;
+		}
+		.tickets .option p {
+			font-size: 1.125rem;
+			margin-bottom: 30px;
+		}
+		.tickets .option img.paypal {
+			display: inline-block;
+			margin-right: 15px;
+			vertical-align: bottom;
+		}
+		
 
 
 
@@ -1304,6 +1397,26 @@ input[type="submit"], input[type="file"] {
 			width: 100%;
 			margin-right: 0;
 		}
+
+		.tickets {
+			margin-top: 20px;
+		}
+		.tickets .option {
+			display: block;
+			width: 100%;
+			padding: 0;
+			
+		}
+		.tickets .option:first-child {
+			border-right: none;
+			border-bottom: 1px solid #d7d7d7;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+		}
+		.tickets .option img.paypal {
+			margin-bottom: 20px;
+		}
+
 
 
 		.mini-carousel li .text {
