@@ -552,11 +552,23 @@ input[type="submit"], input[type="file"] {
 		}
 
 	.home .main .content-area {
+		display: inline-block;
+		vertical-align: top;
 		width: 44%;
 		margin: -10px 0 0 -7%;
 		padding: 60px 5% 50px 7%;
 		background: rgba(35,67,132,.1);
 	}
+
+
+#stats-carousel {
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+	margin-left: 4%;
+	padding-top: 60px;
+}
+
 
 /*Fundraisers*/
 #fundraisers .content-area figure{

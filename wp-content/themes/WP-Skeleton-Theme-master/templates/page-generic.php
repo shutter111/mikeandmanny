@@ -79,6 +79,22 @@
 			<?php echo $secondary_title ? '<h2>'.$secondary_title.'</h2>' : ''; ?>
 			<?php echo $page_intro ? $page_intro : ''; ?>
 		</div>
+		<?php if(is_front_page()): ?>
+		<div id="stats-carousel">
+
+			<div class="pager" id="mini-carousel-pager">
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+
+			<ul id="stats">
+				<li>
+					<canvas id="stat2014" class="stat" width="400" height="400"></canvas>
+				</li>
+			</ul>
+
+		</div>
+		<?php endif; ?>
 
 	</div>
 </article>

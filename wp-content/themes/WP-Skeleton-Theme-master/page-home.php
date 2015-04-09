@@ -1,5 +1,6 @@
 <?php
-	wp_enqueue_script( 'homejs',  get_template_directory_uri() . '/js/home.js', array('jQuery', 'bxSliderjs'), false, true );
+	wp_enqueue_script( 'chartjs',  get_template_directory_uri() . '/js/Chart.js', array('jQuery'), false, true );
+	wp_enqueue_script( 'homejs',  get_template_directory_uri() . '/js/home.js', array('jQuery', 'bxSliderjs', 'chartjs'), false, true );
 
 	get_header();
 
