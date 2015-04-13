@@ -82,16 +82,35 @@
 		<?php if(is_front_page()): ?>
 		<div id="stats-carousel">
 
-			<div class="pager" id="mini-carousel-pager">
+			<!--<div class="pager" id="mini-carousel-pager">
 				<div class="left"></div>
 				<div class="right"></div>
-			</div>
+			</div>-->
 
 			<ul id="stats">
 				<li>
 					<h2>2014</h2>
 					<div class="canvas-holder">
+						<div class="totalNum"><strong>$33,000</strong> Money Raised</div>
 						<canvas id="stat2014" class="stat" width="400" height="400"></canvas>
+					</div>
+					<div class="grey-stats">
+						<div class="grey-stat">
+							<figure><img src="<?php echo get_template_directory_uri(); ?>/images/stat-1.png" alt=""></figure>
+							<div class="text">
+								<span>Volunteer</span>
+								<span class="number">1160</span>
+								<span class="unit">Hours</span>
+							</div>
+						</div>
+						<div class="grey-stat">
+							<figure><img src="<?php echo get_template_directory_uri(); ?>/images/stat-2.png" alt=""></figure>
+							<div class="text">
+								<span>Supported</span>
+								<span class="number">36</span>
+								<span class="unit">Kids</span>
+							</div>
+						</div>
 					</div>
 				</li>
 			</ul>

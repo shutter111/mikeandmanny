@@ -17,29 +17,41 @@ $(document).ready(function(){
 	
 		var data = [
 			{
-		        value: 300,
-		        color:"#F7464A",
-		        highlight: "#FF5A5E",
-		        label: "Red"
+		        value: 20000,
+		        color:"#e7e930",
+		        highlight: "#f1f327",
+		        label: "Program Spending"
 		    },
 		    {
-		        value: 50,
-		        color: "#46BFBD",
-		        highlight: "#5AD3D1",
-		        label: "Green"
+		        value: 15000,
+		        color: "#38558e",
+		        highlight: "#1f4798",
+		        label: "Ski Camp"
 		    },
 		    {
-		        value: 100,
-		        color: "#FDB45C",
-		        highlight: "#FFC870",
-		        label: "Yellow"
+		        value: 10000,
+		        color: "#647bab",
+		        highlight: "#5978ba",
+		        label: "Administration"
+		    },
+		    {
+		        value: 3000,
+		        color: "#c7c6c4",
+		        highlight: "#949491",
+		        label: "Ski Day"
+		    },
+		    {
+		        value: 1500,
+		        color: "#e4e4e2",
+		        highlight: "#dddcda",
+		        label: "Bursaries"
 		    }
 		]
 
 		var myPieChart = new Chart(ctx).Doughnut(data, {
 			animationEasing: 'linear',
 			animationSteps: 50,
-		    animateScale: true
+		    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span class=\"color\" style=\"background-color:<%=segments[i].fillColor%>\"></span><span class=\"value\">$<%=numberWithCommas(segments[i].value)%></span><%if(segments[i].label){%><span class=\"label\"><%=segments[i].label%></span><%}%></li><%}%></ul>"
 		});
 
 		var legend = myPieChart.generateLegend();
@@ -81,3 +93,11 @@ $(document).ready(function(){
 
 
 });
+
+
+/* Utility Functions */
+function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+}
