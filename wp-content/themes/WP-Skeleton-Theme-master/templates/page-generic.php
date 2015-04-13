@@ -89,7 +89,10 @@
 
 			<ul id="stats">
 				<li>
-					<canvas id="stat2014" class="stat" width="400" height="400"></canvas>
+					<h2>2014</h2>
+					<div class="canvas-holder">
+						<canvas id="stat2014" class="stat" width="400" height="400"></canvas>
+					</div>
 				</li>
 			</ul>
 
