@@ -1823,3 +1823,11 @@ article.event {
 
 	}
 
+	@media only screen and (max-width: 320px) {
+
+		.logo {
+			display: block;
+			margin: 0;
+		}
+	}
+
