@@ -1785,7 +1785,7 @@ article.event {
 			font-size: 45px;
 		}
 
-
+		.main hgroup,
 		.main header h1,
 		.home .main header h1 {
 			width: 90%;
@@ -1820,6 +1820,12 @@ article.event {
 				width: 45%;
 				vertical-align: top;
 			}
+
+		#ski-camp-details .ski-camp-details .detail figure,
+		#ski-camp-details .ski-camp-details .detail .text {
+			width: 100%;
+			display: block;
+		}
 
 	}
 
