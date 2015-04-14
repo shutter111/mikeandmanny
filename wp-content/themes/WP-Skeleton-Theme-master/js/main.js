@@ -85,9 +85,11 @@ $(document).ready(function(){
 		
 	}, {
 			offset: '10%'
-		});
+		}
+	);
 
 
-	
-	
+	//mobile nav
+	$('#menu').slicknav();
+
 });

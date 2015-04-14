@@ -39,6 +39,7 @@
 	================================================== -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/stylesheets/fancySelect.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/stylesheets/slicknav.css">
 
 <?php wp_head(); ?>
 <script type='text/javascript' src='/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.40.0-2013.08.13'></script>
@@ -60,7 +61,7 @@ var _wpcf7 = {"loaderUrl":"\/wp-content\/plugins\/contact-form-7\/images\/ajax-l
 					<div class="container">
 						<div class="logo"><a href="<?php echo site_url(); ?>">Mike &amp; Manny Foundation</a></div>
 						<nav id="global">
-							<ul>
+							<ul id="menu">
 								<?php wp_nav_menu( array( 
 														'theme_location' => 'primary',
 														'container' => false,
