@@ -283,22 +283,89 @@ input[type="submit"], input[type="file"] {
 	border-top: 7px solid #172b56;
 }
 
-.header {
-	width: 100%;
-    height:75px;
-    border-bottom:  7px solid #4061a3;
-    clear: both;
-    background: #234384;
-    text-align: center;
+#head {
+	margin: 0 0 190px 0;
+	position: relative;
+	z-index: 9999;
+
+
 }
+
+	.header {
+		/*position: relative;*/
+		width: 100%;
+	    height:75px;
+	    border-bottom:  7px solid #4061a3;
+	    clear: both;
+	    background: #234384;
+	    text-align: left;
+	    z-index: 99;
+	    font-size: 0;
+	    position: fixed;
+		top: 0;
+		left: 0;
+	    /*transition: all .3s ease;*/
+	}
+
+	.logo {
+		position: relative;
+		font-size: 0;
+		text-indent: -9999px;
+
+		width: 160px;
+		height: 175px;
+		display: inline-block;
+		vertical-align: top;
+
+		transition: all .2s ease;
+	}
+		.logo a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			background: url('../images/big_logo.png') no-repeat center top;
+			background-size: 100% auto;
+
+			/*transition: all .3s ease;*/
+		}
+
+	#head.fixed {
+		margin: 0 0 300px 0;
+	}
+
+		#head.fixed .header {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+		#head.fixed .logo {
+			width: 88px;
+			height: 91px;
+			
+		}
+			#head.fixed .logo a {
+				background: url('../images/simple_logo.png') no-repeat center 5px;
+				background-size: 100% auto;
+			}
+
 
 #global {
 	/*padding: 30px 0 0 0;*/
+	display: inline-block;
 	height: 75px;
+	width: 800px;
+
+	transition: all .2s ease;
+}
+#head.fixed #global {
+	width: 872px;
 }
 	#global ul {
 		font-size: 0;
 		height: 100%;
+		text-align: right;
 	}
 		#global li {
 			display: inline-block;
@@ -608,7 +675,7 @@ input[type="submit"], input[type="file"] {
 	canvas.stat {
 		display: inline-block;
 		vertical-align: middle;
-		width: 60%;
+		width: 276px;
 	}
 	ul.doughnut-legend {
 		display: inline-block;
@@ -1119,6 +1186,8 @@ article.event {
 }
 	#our-team .container {
 		font-size: 0;
+		text-align: left;
+		margin-bottom: 60px;
 	}
 
 	#our-team .team-member {
@@ -1126,7 +1195,7 @@ article.event {
 		vertical-align: top;
 		width: 46%;
 		text-align: left;
-		margin: 50px 4% 60px 0;
+		margin: 50px 4% 10px 0;
 	}
 		#our-team .team-member:last-child {
 			margin-right: 0;
@@ -1439,6 +1508,11 @@ article.event {
 			font-size: 85px;
 		}
 
+		.main header h1,
+		.home .main header h1 {
+			font-size: 3rem; 
+		}
+
 		.container:not(.videoWrapper) {
 			width: 92%;
 		}
@@ -1459,6 +1533,11 @@ article.event {
 				width: 100%;
 			}
 
+			.home .main .cta {
+				width: 35%;
+				margin-top: 0;
+			}
+
 		.mini-carousel li .text {
 			padding: 30px 40px 40px;
 		}
@@ -1471,6 +1550,21 @@ article.event {
 			top: 30px;
 			right: 20px;
 		}
+
+		canvas.stat {
+			display: block;
+		}
+		ul.doughnut-legend {
+			display: block;
+			width: 100%;
+			margin: 30px 0 0 0;
+		}
+			ul.doughnut-legend li {
+				display: inline-block;
+				margin-right: 5%;
+				width: 45%;
+				vertical-align: top;
+			}
 	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
@@ -1482,8 +1576,20 @@ article.event {
 			height: auto;
 		}
 
+		.main header, .home .main header {
+			height: auto;
+		}
+		.main header:before {
+			display: none;
+		}
+
 		h1 {
 			font-size: 75px;
+		}
+
+		.main header h1,
+		.home .main header h1 {
+			font-size: 2.5rem; 
 		}
 
 		/* remove sticky footer stuff */
@@ -1614,6 +1720,32 @@ article.event {
 				display: none;
 			}
 
+			.home .main .content-area {
+				display: block;
+				width: 88%;
+				margin: 30px 0 0 0;
+			}
+
+			#stats-carousel {
+				display: block;
+				width: 100%;
+				margin: 0;
+			}
+
+				canvas.stat {
+					display: inline-block;
+				}
+				ul.doughnut-legend {
+					display: inline-block;
+					width: 33%;
+					margin: 0 0 0 5%;
+				}
+					ul.doughnut-legend li {
+						display: block;
+						margin-right: 0;
+						width: 100%;
+					}
+
 	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -1626,6 +1758,22 @@ article.event {
 			font-size: 45px;
 		}
 
+
+		.main header h1,
+		.home .main header h1 {
+			width: 90%;
+			left: 0;
+		}
+
+		.main header .banner {
+			display: none;
+		}
+
+		.home .main .cta {
+			width: 100%;
+			margin: 20px auto 0;
+		}
+
 		p {
 			font-size: 24px;
 		}
@@ -1633,6 +1781,18 @@ article.event {
 		.cta {
 			margin-top: 30px;
 		}
+
+		ul.doughnut-legend {
+			display: block;
+			width: 100%;
+			margin: 30px 0 0 0;
+		}
+			ul.doughnut-legend li {
+				display: inline-block;
+				margin-right: 5%;
+				width: 45%;
+				vertical-align: top;
+			}
 
 	}
 

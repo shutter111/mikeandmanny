@@ -9,45 +9,99 @@
 					)
 				);
 
+	$skiDay = new WP_Query(array(
+
+						'post_type' => 'ski-day'
+
+					)
+				);
+
 	if(!is_front_page()):
 ?>
+		
+		<?php if(is_page('ski-camp')): ?>
 
-		<?php if($skiCamp->have_posts()) : ?>
+			<?php if($skiCamp->have_posts()) : ?>
 
-			<div class="container mini-carousel-wrapper">
+				<div class="container mini-carousel-wrapper">
 
-				<div class="pager yellow" id="mini-carousel-pager">
-					<div class="left"></div>
-					<div class="right"></div>
+					<div class="pager yellow" id="mini-carousel-pager">
+						<div class="left"></div>
+						<div class="right"></div>
+					</div>
+
+					<ul class="mini-carousel">
+
+						<?php while($skiCamp->have_posts()): $skiCamp->the_post();
+
+							$page_title = get_field('page_title');
+							$secondary_title = get_field('secondary_title');
+							$page_intro = get_field('page_intro');
+
+							$thumb_id = get_post_thumbnail_id();
+							$img_url = wp_get_attachment_image_src( $thumb_id, 'full' );
+
+						?>
+
+							<li>
+								<div class="text">
+									<h3><?php the_title(); ?></h3>
+									<?php echo $secondary_title ? '<p>'.$secondary_title.'</p>' : ''; ?>
+									<a href="<?php the_permalink(); ?>" class="mandmBtn">Learn More</a>
+								</div>
+								<div class="image" style="background-image:url('<?php echo $img_url[0]; ?>');">
+								</div>
+							</li>
+
+						<?php endwhile; ?>
+					</ul>
+
 				</div>
 
-				<ul class="mini-carousel">
+			<?php endif; ?>
 
-					<?php while($skiCamp->have_posts()): $skiCamp->the_post();
+		<?php elseif(is_page('ski-day')): ?>
 
-						$page_title = get_field('page_title');
-						$secondary_title = get_field('secondary_title');
-						$page_intro = get_field('page_intro');
 
-						$thumb_id = get_post_thumbnail_id();
-						$img_url = wp_get_attachment_image_src( $thumb_id, 'full' );
+			<?php if($skiDay->have_posts()) : ?>
 
-					?>
+				<div class="container mini-carousel-wrapper">
 
-						<li>
-							<div class="text">
-								<h3><?php the_title(); ?></h3>
-								<?php echo $secondary_title ? '<p>'.$secondary_title.'</p>' : ''; ?>
-								<a href="<?php the_permalink(); ?>" class="mandmBtn">Learn More</a>
-							</div>
-							<div class="image" style="background-image:url('<?php echo $img_url[0]; ?>');">
-							</div>
-						</li>
+					<div class="pager yellow" id="mini-carousel-pager">
+						<div class="left"></div>
+						<div class="right"></div>
+					</div>
 
-					<?php endwhile; ?>
-				</ul>
+					<ul class="mini-carousel">
 
-			</div>
+						<?php while($skiCamp->have_posts()): $skiCamp->the_post();
+
+							$page_title = get_field('page_title');
+							$secondary_title = get_field('secondary_title');
+							$page_intro = get_field('page_intro');
+
+							$thumb_id = get_post_thumbnail_id();
+							$img_url = wp_get_attachment_image_src( $thumb_id, 'full' );
+
+						?>
+
+							<li>
+								<div class="text">
+									<h3><?php the_title(); ?></h3>
+									<?php echo $secondary_title ? '<p>'.$secondary_title.'</p>' : ''; ?>
+									<a href="<?php the_permalink(); ?>" class="mandmBtn">Learn More</a>
+								</div>
+								<div class="image" style="background-image:url('<?php echo $img_url[0]; ?>');">
+								</div>
+							</li>
+
+						<?php endwhile; ?>
+					</ul>
+
+				</div>
+
+			<?php endif; ?>
+
 
 		<?php endif; ?>
 

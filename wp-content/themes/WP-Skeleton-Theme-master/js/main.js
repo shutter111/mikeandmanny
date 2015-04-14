@@ -71,5 +71,23 @@ $(document).ready(function(){
 
 	//mini carousel
 
+	//header animaiton
+	$('.main').waypoint(function(direction) {
+		if( direction === 'down' && !$('#head').hasClass('fixed') ){
 
+			$('#head').addClass('fixed');
+
+		}else if( direction === 'up' && $('#head').hasClass('fixed') ){
+
+			$('#head').removeClass('fixed');
+
+		}
+		
+	}, {
+			offset: '10%'
+		});
+
+
+	
+	
 });

@@ -207,6 +207,13 @@
                 "operator": "==",
                 "value": "2"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "144"
+            }
         ]
     ],
     "menu_order": 0,
@@ -215,5 +222,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1426685694
+    "modified": 1428984035
 }

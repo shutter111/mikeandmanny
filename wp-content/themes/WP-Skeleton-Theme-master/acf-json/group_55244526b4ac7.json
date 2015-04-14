@@ -1,6 +1,6 @@
 {
     "key": "group_55244526b4ac7",
-    "title": "Fundraisers",
+    "title": "Fundraisers\/Bursaries",
     "fields": [
         {
             "key": "field_552446b478f84",
@@ -277,6 +277,13 @@
                 "operator": "==",
                 "value": "41"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "140"
+            }
         ]
     ],
     "menu_order": 0,
@@ -285,5 +292,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1428473627
+    "modified": 1428982861
 }

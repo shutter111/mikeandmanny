@@ -55,19 +55,22 @@ var _wpcf7 = {"loaderUrl":"\/wp-content\/plugins\/contact-form-7\/images\/ajax-l
 	<div id="pageContainer">
 		<div class="containerWrapper">
 
-			<header class="header">
-				<div class="container">
-					<nav id="global">
-						<ul>
-							<?php wp_nav_menu( array( 
-													'theme_location' => 'primary',
-													'container' => false,
-													'items_wrap' => '%3$s'
-												) 
-											); 
-							?>
-							<li><a href="https://app.etapestry.com/cart/SportBC/default/item.php?ref=1691.0.110200877" class="mandmBtn" target="_blank">Donate Now</a></li>
-						</ul>
-					</nav>
-				</div>
-			</header>
+			<section id="head">
+				<header class="header">
+					<div class="container">
+						<div class="logo"><a href="<?php echo site_url(); ?>">Mike &amp; Manny Foundation</a></div>
+						<nav id="global">
+							<ul>
+								<?php wp_nav_menu( array( 
+														'theme_location' => 'primary',
+														'container' => false,
+														'items_wrap' => '%3$s'
+													) 
+												); 
+								?>
+								<li><a href="https://app.etapestry.com/cart/SportBC/default/item.php?ref=1691.0.110200877" class="mandmBtn" target="_blank">Donate Now</a></li>
+							</ul>
+						</nav>
+					</div>
+				</header>
+			</section>

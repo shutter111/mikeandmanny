@@ -367,6 +367,13 @@
                 "operator": "==",
                 "value": "ski-camp"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "ski-day"
+            }
         ]
     ],
     "menu_order": 0,
@@ -375,5 +382,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1428434285
+    "modified": 1428984047
 }

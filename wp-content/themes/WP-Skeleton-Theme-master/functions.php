@@ -52,6 +52,7 @@ add_action('wp_enqueue_scripts', 'Wps_load_styles');
 function theme_name_scripts() {
 	wp_enqueue_script( 'jQuery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', array(), false, true );
 	wp_enqueue_script( 'bxSliderjs',  get_template_directory_uri() . '/js/jquery.bxslider.js', array('jQuery'), false, true );
+    wp_enqueue_script( 'waypointsjs',  get_template_directory_uri() . '/js/jquery.waypoints.js', array('jQuery'), false, true );
 	wp_enqueue_script( 'mainjs',  get_template_directory_uri() . '/js/main.js', array('jQuery', 'bxSliderjs'), false, true );
 }
 
@@ -74,8 +75,8 @@ function ski_camp_init() {
         'all_items'          => __( 'All Ski Camp', 'your-plugin-textdomain' ),
         'search_items'       => __( 'Search Ski Camp', 'your-plugin-textdomain' ),
         'parent_item_colon'  => __( 'Parent Ski Camp:', 'your-plugin-textdomain' ),
-        'not_found'          => __( 'No teams found.', 'your-plugin-textdomain' ),
-        'not_found_in_trash' => __( 'No teams found in Trash.', 'your-plugin-textdomain' )
+        'not_found'          => __( 'No ski camp found.', 'your-plugin-textdomain' ),
+        'not_found_in_trash' => __( 'No ski camp found in Trash.', 'your-plugin-textdomain' )
     );
     $args = array(
         'labels'             => $labels,
@@ -92,6 +93,43 @@ function ski_camp_init() {
         'supports'           => array( 'title', 'thumbnail', 'editor', 'page-attributes' )
     );
     register_post_type( 'ski-camp', $args );
+    flush_rewrite_rules();
+}
+
+// Ski Day
+add_action( 'init', 'ski_day_init' );
+function ski_day_init() {
+    $labels = array(
+        'name'               => _x( 'Ski Day', 'post type general name', 'your-plugin-textdomain' ),
+        'singular_name'      => _x( 'Ski Day', 'post type singular name', 'your-plugin-textdomain' ),
+        'menu_name'          => _x( 'Ski Day', 'admin menu', 'your-plugin-textdomain' ),
+        'name_admin_bar'     => _x( 'Ski Day', 'add new on admin bar', 'your-plugin-textdomain' ),
+        'add_new'            => _x( 'Add New', 'ski day', 'your-plugin-textdomain' ),
+        'add_new_item'       => __( 'Add New Ski Day', 'your-plugin-textdomain' ),
+        'new_item'           => __( 'New Ski Day', 'your-plugin-textdomain' ),
+        'edit_item'          => __( 'Edit Ski Day', 'your-plugin-textdomain' ),
+        'view_item'          => __( 'View Ski Day', 'your-plugin-textdomain' ),
+        'all_items'          => __( 'All Ski Day', 'your-plugin-textdomain' ),
+        'search_items'       => __( 'Search Ski Day', 'your-plugin-textdomain' ),
+        'parent_item_colon'  => __( 'Parent Ski Day:', 'your-plugin-textdomain' ),
+        'not_found'          => __( 'No ski day found.', 'your-plugin-textdomain' ),
+        'not_found_in_trash' => __( 'No ski day found in Trash.', 'your-plugin-textdomain' )
+    );
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true, //array( 'slug' => 'team' ),
+        //'capability_type'    => 'post',
+        'has_archive'        => false,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'thumbnail', 'editor', 'page-attributes' )
+    );
+    register_post_type( 'ski-day', $args );
     flush_rewrite_rules();
 }
 
