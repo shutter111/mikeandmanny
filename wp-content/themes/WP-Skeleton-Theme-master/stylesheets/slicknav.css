@@ -116,6 +116,7 @@
     background:#ccc;
     color:#fff;
 }
+.slicknav_nav li.current_page_item a,
 .slicknav_nav a:hover{
     text-decoration: none;
     color: #e7e930 !important;

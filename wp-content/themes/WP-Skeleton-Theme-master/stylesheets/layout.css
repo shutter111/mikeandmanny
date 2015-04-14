@@ -216,7 +216,7 @@ input[type="submit"], input[type="file"] {
 
 .mandmBtn, .slicknav_nav .mandmBtn{
 	background: #e7e930;
-	color: #313131;
+	color: #313131 !important;
 	text-align: center;
 	text-transform: uppercase;
 	padding: 15px 20px;
@@ -424,8 +424,8 @@ input[type="submit"], input[type="file"] {
 			margin: 0 0 0 -7px;
 		}
 
-			li.current-menu-item a{
-				color: #062056 !important;
+			#global li.current-menu-item a{
+				color: #062056;
 			}
 
 .containerWrapper > .container {
