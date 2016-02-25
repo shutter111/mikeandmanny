@@ -1,7 +1,7 @@
 <?php
 /**
  * The base configurations of the WordPress.
- *
+ * 
  * This file has the following configurations: MySQL settings, Table Prefix,
  * Secret Keys, and ABSPATH. You can find more information by visiting
  * {@link http://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
@@ -16,13 +16,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'mike_mikeandmanny');
+define('DB_NAME', 'mikeandmanny');
 
 /** MySQL database username */
-define('DB_USER', 'mike_user');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'm1k3andm@nny');
+define('DB_PASSWORD', 'Cre@tive123');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

@@ -92,4 +92,47 @@ $(document).ready(function(){
 	//mobile nav
 	$('#menu').slicknav();
 
+	// athlete form 
+	$('.next-btn').on('click',function () {
+		$('#form-carousel').carousel('next');
+	});
+	$('.prev-btn').on('click',function () {
+		$('#form-carousel').carousel('prev');
+	});
+
+	// kill carousel auto play
+	$('.carousel').each(function(){
+        $(this).carousel({
+            interval: false
+        });
+    });
+
+    // form carousel 
+    $('#athlete-application').modal('show');
+    $('#form-carousel').on('slide.bs.carousel', function (event) {
+    	var active = $(event.target).find('.carousel-inner > .item.active');
+		var from = active.index();
+		var next = $(event.relatedTarget);
+		var to = next.index();
+		var currentSlide = to;
+		if(to > 0){
+			$('#form-carousel .prev-btn').fadeIn();
+		}else{
+			$('#form-carousel .prev-btn').fadeOut();
+		}
+		if(to == 2 ){
+			$('#form-carousel .next-btn').fadeOut();
+			$('#form-carousel .form-submit').fadeIn();
+		}else{
+			$('#form-carousel .next-btn').fadeIn();
+			$('#form-carousel .form-submit').fadeOut();
+		}
+		$('#form-carousel .page-counter').html((currentSlide+1)+'/3'); 
+
+    });
+
+    $('.close-this-modal,.apply-btn').on('click',function () {
+    	 $('#athlete-application').modal('hide');
+    });
+
 });

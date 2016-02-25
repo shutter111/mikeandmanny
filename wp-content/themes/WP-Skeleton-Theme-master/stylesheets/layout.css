@@ -1841,3 +1841,138 @@ article.event {
 		}
 	}
 
+
+
+/**** ATHLETE APPLICATION MODAL  ******/
+#athlete-application {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(35,67,132,0.7);
+	top: 0px;
+	left: 0px;
+}
+
+#athlete-application .content-wrapper {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	max-width: 780px;
+	background-color: #fff;
+	padding: 70px 55px;
+}
+
+.modal-form {
+	position: relative;
+	margin-top: 30px;
+}
+
+.modal-form .half {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	margin-left: -4px;
+}
+
+.modal-form .third {
+	position: relative;
+	display: inline-block;
+	width: 35%;
+	margin-left: -4px;
+}
+
+.modal-form .quarter {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	margin-left: -4px;
+}
+
+.modal-form input {
+	width: 100%;
+	position: relative;
+	padding: 20px;
+	font-family: 'klinic_slabbook';
+	font-size: 18px;
+	color: #313131;
+	display: inline-block;
+}
+
+.modal-form select {
+	width: 100%;
+	position: relative;
+	padding: 20px 5px;
+	font-family: 'klinic_slabbook';
+	font-size: 18px;
+	color: #313131;
+}
+
+.modal-form textarea {
+	width: 100%;
+	min-height: 120px;
+}
+
+.modal-form .next-btn {
+    float: right;
+    margin-top: -30px;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+.modal-form .n-btn {
+	position: relative;
+    padding: 20px;
+    background-color: #313131;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-form .prev-btn {
+    margin-top: -30px;
+    float: left;
+    display: none;
+}
+
+.modal-form .page-counter {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: #313131;
+	font-family: 'langdonregular';
+	font-size: 21px;
+}
+
+.close-this-modal {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	color: #313131;
+	cursor: pointer;
+	font-family: 'klinic_slabbook';
+	font-size: 18px;
+}
+
+.apply-btn {
+	position: relative;
+	text-align: center;
+	background-color: #e7e930;
+	padding: 20px 50px;
+	margin: auto;
+}
+
+.form-submit {
+	position: relative;
+	margin-top: 90px;
+	max-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+	display: none;
+}
+.center {
+	position: relative;
+	margin: auto;
+}
