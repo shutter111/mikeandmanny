@@ -2,8 +2,6 @@
  
   /**** ATHLETE APPLICATION MODAL *****/
   $formData = get_field('athlete_application');
- // print_r($formData);
-  echo "<br><br><br>" . $formData[0]['first_name'];
 
 ?>
 
@@ -11,7 +9,8 @@
 	<div class="content-wrapper">
 	  <div class="close-this-modal">X</div>	
 	  <div class="center"><h2>Athlete application</h2></div>
-	  <form class="modal-form">
+	  <form class="modal-form" data-email="<?php echo $formData[0]['email_to_send_data']?>">
+	  	<div class="form-error"></div>
 
 	  	<div id="form-carousel" class="carousel slide" data-ride="carousel">
 	  		<div class="carousel-inner" role="listbox">
@@ -141,8 +140,7 @@
 				<div class="item">
 					<div class="row">
 						<div class="col-md-12">		
-						   <h2>Thank you</h2>
-						   <p>Your info has been sent!</p>
+						   <?php echo $formData[0]['thank_you_message']?>
 						</div>  	
 				  	</div>
 				</div><!-- /. END SUCCESS ITEM -->	

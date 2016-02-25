@@ -1976,3 +1976,16 @@ article.event {
 	position: relative;
 	margin: auto;
 }
+
+.form-error {
+	color: red;
+	position: relative;
+	margin: 30px 0px;
+}
+
+.error-item {
+	position: relative;
+	width: auto;
+	display: inline-block;
+	margin-right: 10px;
+}

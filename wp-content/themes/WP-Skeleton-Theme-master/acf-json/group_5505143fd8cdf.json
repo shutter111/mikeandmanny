@@ -241,6 +241,28 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_56cf29566758f",
+                            "label": "Form Email",
+                            "name": "email_to_send_data",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "This will be the email all form entries are sent to. If you want to send to multiple users add a \",\" between emails. <br> email@emai1.com,email@email2.com",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
                             "key": "field_56cf183e8b432",
                             "label": "First Name",
                             "name": "first_name",
@@ -668,6 +690,25 @@
                                     "max": ""
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_56cf3ee3e4ac8",
+                            "label": "Thank You Message",
+                            "name": "thank_you_message",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "Use this area to display the thank you message. ",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1
                         }
                     ],
                     "min": "",
@@ -691,5 +732,5 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1456413326
+    "modified": 1456422677
 }
