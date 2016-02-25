@@ -1,7 +1,9 @@
 <?php
  
   /**** ATHLETE APPLICATION MODAL *****/
-
+  $formData = get_field('athlete_application');
+ // print_r($formData);
+  echo "<br><br><br>" . $formData[0]['first_name'];
 
 ?>
 
@@ -16,39 +18,50 @@
 	  			<div class="item active">
 				  	<div class="row">
 					  	<div class="col-md-6">
-					  		<input type="text" placeholder="First Name" id="f-name" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['first_name'];?>" id="f-name" value="">
 					  	</div>
 					  	<div class="col-md-6">	
-					  		<input type="text" placeholder="Last Name" id="l-name" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['last_name'];?>" id="l-name" value="">
 					  	</div>
 				  	</div>
 				  	<div class="row">
 					  	<div class="col-md-4">
-					  		<input type="text" placeholder="Street Address" id="address" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['address'];?>" id="address" value="">
 					  	</div>
 					  	<div class="col-md-4">	
-					  		<input type="text" placeholder="City" id="city" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['city'];?>" id="city" value="">
 					  	</div>
 					  	<div class="col-md-4">	
 					  		<select id="province">
+					  			<option selected>AB</option>
+					  			<option selected>BC</option>
+					  			<option selected>MB</option>
+					  			<option selected>NB</option>
+					  			<option selected>NL</option>
+					  			<option selected>NS</option>
+					  			<option selected>NT</option>
+					  			<option selected>NU</option>
 					  			<option selected>ON</option>
+					  			<option selected>QC</option>
+					  			<option selected>SK</option>
+					  			<option selected>YT</option>
 					  		</select>
 					  	</div>
 				  	</div>
 				  	<div class="row">
 					  	<div class="col-md-6">
-					  		<input type="text" placeholder="Phone Number" id="phone" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['phone_number'];?>" id="phone" value="">
 					  	</div>
 					  	<div class="col-md-6">	
-					  		<input type="text" placeholder="Email" id="email" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['email'];?>" id="email" value="">
 					  	</div>
 				  	</div>
 				  	<div class="row">
 					  	<div class="col-md-6">
-					  		<input type="text" placeholder="Ski Club" id="ski-club" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['ski_club'];?>" id="ski-club" value="">
 					  	</div>
 					  	<div class="col-md-6">	
-					  		<input type="text" placeholder="Coach's Name" id="c-name" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['coach_name'];?>" id="c-name" value="">
 					  	</div>
 				  	</div>
 				  	<div class="row">
@@ -59,72 +72,80 @@
 					  		</select>
 					  	</div>
 					  	<div class="col-md-3">	
-					  		<input type="text" placeholder="Year of birth" id="yob" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['year_of_birth'];?>" id="yob" value="">
 					  	</div>
 					  	<div class="col-md-3">	
-					  		<input type="text" placeholder="Height" id="height" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['height'];?>" id="height" value="">
 					  	</div>
 					  	<div class="col-md-3">	
-					  		<input type="text" placeholder="Weight" id="weight" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['weight'];?>" id="weight" value="">
 					  	</div>
 				  	</div>
 				  	<div class="row">
 					  	<div class="col-md-4">	
-					  		<input type="text" placeholder="Helmet Size" id="helmet-size" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['helmet_size'];?>" id="helmet-size" value="">
 					  	</div>
 					  	<div class="col-md-4">	
-					  		<input type="text" placeholder="Pole Size" id="pole-size" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['pole_size'];?>" id="pole-size" value="">
 					  	</div>
 					  	<div class="col-md-4">	
-					  		<input type="text" placeholder="Shirt Size" id="shirt-size" value="">
+					  		<input type="text" placeholder="<?php echo $formData[0]['sirt_size'];?>" id="shirt-size" value="">
 					  	</div>
 				  	</div>
 				</div><!-- /. END FIRST ITEM -->
 				<div class="item">
 					<div class="row">
 						<div class="col-md-12">		
-						  	<label>How many off season camps have you attended in the last 2 years and where?</label>
-						  	<textarea></textarea>
+						  	<label><?php echo $formData[0]['questions'][0]['question'];?></label>
+						  	<textarea id="q-1"></textarea>
 						</div>  	
 				  	</div>
 				  	<div class="row">
 						<div class="col-md-6">		
-						  	<label>How many siblings do you have?</label>
-						  	<textarea></textarea>
+						  	<label><?php echo $formData[0]['questions'][1]['question'];?></label>
+						  	<textarea id="q-2"></textarea>
 						</div>
 						<div class="col-md-6">		
-						  	<label>Do you play any other sports? If yes, which ones?</label>
-						  	<textarea></textarea>
+						  	<label><?php echo $formData[0]['questions'][2]['question'];?></label>
+						  	<textarea id="q-3"></textarea>
 						</div>   	
 				  	</div>
 				  	<div class="row">
 						<div class="col-md-12">		
-						  	<label>What do you hope to gain from the Mike and Manny Camp?</label>
-						  	<textarea></textarea>
+						  	<label><?php echo $formData[0]['questions'][3]['question'];?></label>
+						  	<textarea id="q-4"></textarea>
 						</div>  	
 				  	</div>
 				</div><!-- /. END SECOND ITEM -->	
 				<div class="item">
 					<div class="row">
 						<div class="col-md-12">		
-						  	<label>What does ski racing mean to you?</label>
-						  	<textarea></textarea>
+						  	<label><?php echo $formData[0]['questions'][4]['question'];?></label>
+						  	<textarea id="q-5"></textarea>
 						</div>  	
 				  	</div>
 				  	<div class="row">
 						<div class="col-md-12">		
-						  	<label>Describe your perfect day on the mountain.</label>
-						  	<textarea></textarea>
+						  	<label><?php echo $formData[0]['questions'][5]['question'];?></label>
+						  	<textarea id="q-6"></textarea>
 						</div>
 				  	</div>
 				  	<div class="row">
 						<div class="col-md-12">		
-						  	<label>Describe yourself in 3 words.</label>
-						  	<textarea></textarea>
+						  	<label><?php echo $formData[0]['questions'][6]['question'];?></label>
+						  	<textarea id="q-7"></textarea>
 						</div>  	
 				  	</div>
 				  		
-				</div><!-- /. END third ITEM -->	
+				</div><!-- /. END third ITEM -->
+				<div class="item">
+					<div class="row">
+						<div class="col-md-12">		
+						   <h2>Thank you</h2>
+						   <p>Your info has been sent!</p>
+						</div>  	
+				  	</div>
+				</div><!-- /. END SUCCESS ITEM -->	
 
 			</div>
 			<div class="page-counter">1/3</div>

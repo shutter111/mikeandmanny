@@ -134,8 +134,48 @@ $(document).ready(function(){
 
     });
 
-    $('.close-this-modal,.apply-btn').on('click',function () {
+    $('.close-this-modal').on('click',function () {
     	 $('#athlete-application').modal('hide');
     });
+
+    $('.apply-btn').on('click',function () {
+    	$('#form-carousel').carousel(3);
+    	$('#form-carousel .page-counter').html(''); 
+    	$('#form-carousel .next-btn').fadeOut();
+		$('#form-carousel .form-submit').fadeOut();
+		$('#form-carousel .prev-btn').fadeOut();
+		collectAndSendData();
+    });
+
+
+    // send form data 
+    function collectAndSendData () {
+    	var fName = $('#f-name').val();
+    	var lName = $('#l-name').val();
+    	var addr = $('#address').val();
+    	var city = $('#city').val();
+    	var province = $('#province :selected').text();
+    	var phone = $('#phone').val();
+    	var email = $('#email').val();
+    	var skiClub = $('#ski-club').val();
+    	var coachName = $('#c-name').val();
+    	var gender = $('#gender :selected').text();
+    	var yob = $('#yob').val();
+    	var height = $('#height').val();
+    	var weight = $('#weight').val();
+    	var hSize = $('#helmet-size').val();
+    	var pSize = $('#pole-size').val();
+    	var sSize = $('#shirt-size').val();
+    	var q1 = $('#q-1').val();
+    	var q2 = $('#q-2').val();
+    	var q3 = $('#q-3').val();
+    	var q4 = $('#q-4').val();
+    	var q5 = $('#q-5').val();
+    	var q6 = $('#q-6').val();
+    	var q7 = $('#q-7').val();
+    	
+
+    }
+
 
 });

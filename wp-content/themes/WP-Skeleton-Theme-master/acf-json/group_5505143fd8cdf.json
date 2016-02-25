@@ -201,7 +201,7 @@
         },
         {
             "key": "field_56cf07d5184b6",
-            "label": "Display Athlete Form Button",
+            "label": "Display Athlete Form",
             "name": "display_form_button",
             "prefix": "",
             "type": "true_false",
@@ -215,6 +215,465 @@
             },
             "message": "",
             "default_value": 1
+        },
+        {
+            "key": "field_56cf17bf8b431",
+            "label": "Athlete Application",
+            "name": "athlete_application",
+            "prefix": "",
+            "type": "flexible_content",
+            "instructions": "Use this block to update the application form elements.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Athlete Application",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "56cf17d1b7e3c",
+                    "name": "athlete_application",
+                    "label": "Athlete Application",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_56cf183e8b432",
+                            "label": "First Name",
+                            "name": "first_name",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user First Name Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf18638b433",
+                            "label": "Last Name",
+                            "name": "last_name",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user Last Name Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf18718b434",
+                            "label": "Address",
+                            "name": "address",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user Address Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf187f8b435",
+                            "label": "City",
+                            "name": "city",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user City Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf188b8b436",
+                            "label": "Province",
+                            "name": "province",
+                            "prefix": "",
+                            "type": "select",
+                            "instructions": "Use this field to enter province Label(s)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "AB": "AB",
+                                "BC": "BC",
+                                "MB": "MB",
+                                "NB": "NB",
+                                "NL": "NL",
+                                "NS": "NS",
+                                "NT": "NT",
+                                "NU": "NU",
+                                "ON": "ON",
+                                "PE": "PE",
+                                "QC": "QC",
+                                "SK": "SK",
+                                "YT": "YT"
+                            },
+                            "default_value": {
+                                "ON": "ON"
+                            },
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0
+                        },
+                        {
+                            "key": "field_56cf19131d3ba",
+                            "label": "Phone Number",
+                            "name": "phone_number",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user Phone Number Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf192a1d3bb",
+                            "label": "Email",
+                            "name": "email",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user Emaily Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf193d1d3bc",
+                            "label": "Ski Club",
+                            "name": "ski_club",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter Ski Club Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf19511d3bd",
+                            "label": "Coach Name",
+                            "name": "coach_name",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter Coach Name Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf195f1d3be",
+                            "label": "Gender",
+                            "name": "gender",
+                            "prefix": "",
+                            "type": "select",
+                            "instructions": "Use this field to enter Gender choices. ",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Male": "Male",
+                                "Female": "Female"
+                            },
+                            "default_value": {
+                                "Male": "Male"
+                            },
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0
+                        },
+                        {
+                            "key": "field_56cf199a1d3bf",
+                            "label": "Year Of Birth",
+                            "name": "year_of_birth",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter Year Of Birth Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf19bb1d3c0",
+                            "label": "Height",
+                            "name": "height",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter Height Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf19d01d3c1",
+                            "label": "Weight",
+                            "name": "weight",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter Weight Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf19db1d3c2",
+                            "label": "Helmet Size",
+                            "name": "helmet_size",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter Helmet Size Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf19f41d3c3",
+                            "label": "Pole Size",
+                            "name": "pole_size",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter Pole Size Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf1a061d3c4",
+                            "label": "Sirt Size",
+                            "name": "sirt_size",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter Sirt Size Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf1a1d1d3c5",
+                            "label": "Questions",
+                            "name": "questions",
+                            "prefix": "",
+                            "type": "flexible_content",
+                            "instructions": "Use this object to update form questions. ",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "button_label": "Add Question",
+                            "min": "",
+                            "max": "",
+                            "layouts": [
+                                {
+                                    "key": "56cf1a2f6a4e3",
+                                    "name": "questions",
+                                    "label": "Questions",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_56cf1a4a1d3c6",
+                                            "label": "Question",
+                                            "name": "question",
+                                            "prefix": "",
+                                            "type": "text",
+                                            "instructions": "Use this field to enter the question to ask, ",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -232,5 +691,5 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1456408699
+    "modified": 1456413326
 }
