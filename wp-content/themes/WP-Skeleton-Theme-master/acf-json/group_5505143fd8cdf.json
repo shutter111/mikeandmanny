@@ -198,6 +198,23 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_56cf07d5184b6",
+            "label": "Display Athlete Form Button",
+            "name": "display_form_button",
+            "prefix": "",
+            "type": "true_false",
+            "instructions": "Use this field to display or not display the \"Athlete Application\" button. <br><br>\r\nChecked will display. No check wont display. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
         }
     ],
     "location": [
@@ -207,20 +224,13 @@
                 "operator": "==",
                 "value": "2"
             }
-        ],
-        [
-            {
-                "param": "page",
-                "operator": "==",
-                "value": "144"
-            }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "top",
+    "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1428984035
+    "modified": 1456408699
 }

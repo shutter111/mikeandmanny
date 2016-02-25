@@ -108,7 +108,10 @@ $(document).ready(function(){
     });
 
     // form carousel 
-    $('#athlete-application').modal('show');
+    $('.open-athlete-form').on('click',function (e) {
+    	e.preventDefault();
+    	$('#athlete-application').modal('show');
+    });
     $('#form-carousel').on('slide.bs.carousel', function (event) {
     	var active = $(event.target).find('.carousel-inner > .item.active');
 		var from = active.index();

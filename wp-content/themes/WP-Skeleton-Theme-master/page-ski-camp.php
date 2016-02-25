@@ -63,6 +63,12 @@
 							<?php endwhile; ?>
 
 						</ul>
+						<?php 
+							$formDisplay = get_field('display_form_button');
+							if($formDisplay == 1){ 
+						?>
+						<a href="#" class="mandmBtn open-athlete-form" target="_blank">Athlete application</a>
+						<?php }; ?>
 
 					</div>
 
