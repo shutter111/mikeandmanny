@@ -1,7 +1,7 @@
 <?php
  
   /**** ATHLETE APPLICATION MODAL *****/
-  $formData = get_field('athlete_application');
+  $formData = get_field('athlete_application',2);
 
 ?>
 

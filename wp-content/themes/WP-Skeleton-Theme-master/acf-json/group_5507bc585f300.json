@@ -47,6 +47,144 @@
                     "ui": 1
                 }
             ]
+        },
+        {
+            "key": "field_56cf72201b028",
+            "label": "Display Button Althete Application",
+            "name": "display_button_athlete",
+            "prefix": "",
+            "type": "flexible_content",
+            "instructions": "Use this block to set the button display and text. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Button and Display",
+            "min": "",
+            "max": 1,
+            "layouts": [
+                {
+                    "key": "56cf54189c3cb",
+                    "name": "display_button",
+                    "label": "Display Button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_56cf72201b029",
+                            "label": "Display",
+                            "name": "display",
+                            "prefix": "",
+                            "type": "true_false",
+                            "instructions": "Select this checkbox to display the button. If not selected the button will not display.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_56cf72201b02a",
+                            "label": "Button Title",
+                            "name": "button_title",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter the button text. This field is limited to 75 characters. ",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 75,
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        },
+        {
+            "key": "field_56cf727ef5b0c",
+            "label": "Display Button Coach Application",
+            "name": "display_button_coach",
+            "prefix": "",
+            "type": "flexible_content",
+            "instructions": "Use this block to set the button display and text. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Button and Display",
+            "min": "",
+            "max": 1,
+            "layouts": [
+                {
+                    "key": "56cf54189c3cb",
+                    "name": "display_button",
+                    "label": "Display Button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_56cf727ef5b0d",
+                            "label": "Display",
+                            "name": "display",
+                            "prefix": "",
+                            "type": "true_false",
+                            "instructions": "Select this checkbox to display the button. If not selected the button will not display.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_56cf727ef5b0e",
+                            "label": "Button Title",
+                            "name": "button_title",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter the button text. This field is limited to 75 characters. ",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 75,
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -64,5 +202,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1426571326
+    "modified": 1456435857
 }

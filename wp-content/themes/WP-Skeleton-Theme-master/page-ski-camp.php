@@ -8,9 +8,6 @@
 			if(have_rows('details')): while(have_rows('details')): the_row();
 ?>
 
-<?php get_template_part( 'templates/athlete-application' ); ?>
-<?php get_template_part( 'templates/coach-application' ); ?>
-
 				<div class="container" id="ski-camp-details">
 
 

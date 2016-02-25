@@ -9,8 +9,7 @@
 			get_template_part( 'templates/page-generic' );
 ?>
 	
-
-		<?php get_template_part( 'templates/section-mini-carousel' ); ?>
+	<?php get_template_part( 'templates/section-mini-carousel' ); ?>
 
 <?php
 

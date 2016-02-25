@@ -112,6 +112,28 @@
 							</div>
 						</div>
 					</div>
+					<div class="copy-block">
+						<h2>Applications for 2016 Ski Camp are now open</h2>
+					</div>
+					<div class="btn-wrapper-home margin-left">
+						<?php 
+							$athleteformDisplay = get_field('display_button_athlete',69);
+							$active = $athleteformDisplay[0]['display'];
+							$formTitle = $athleteformDisplay[0]['button_title'];
+							if($active == 1){ 
+						?>
+						 <a href="#" class="mandmBtn open-athlete-form" target="_blank"><?php echo $formTitle;?></a>
+						<?php }; ?>
+
+						<?php 
+							$coachformDisplay = get_field('display_button_coach',69);
+							$active = $coachformDisplay[0]['display'];
+							$formTitle = $coachformDisplay[0]['button_title'];
+							if($active == 99){ 
+						?>
+							<a href="#" class="mandmBtn open-coach-form" target="_blank"><?php echo $formTitle;?></a>
+						<?php }; ?>
+					</div>
 				</li>
 			</ul>
 
