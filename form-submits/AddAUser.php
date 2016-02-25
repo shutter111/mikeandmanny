@@ -36,7 +36,6 @@ header("Pragma: no-cache");
 	$to = $FormEmail;
 	$subject = "Athlete Application";
 	$message = '<html><body>';
-	$message .= "Athlete Application".'<br>'
 	$message .= "Name: ". $FName.' '. $LName .'<br>';
 	$message .= "Address: ". $addr .'<br>';
 	$message .= "City: ". $city .'<br>';
@@ -52,13 +51,13 @@ header("Pragma: no-cache");
 	$message .= "Helet Size: ". $hSize .'<br>';
 	$message .= "Pole Size: ". $pSize .'<br>';
 	$message .= "Ski Size: ". $sSize.'<br>';
-	$message .= "How many off season camps have you attended in the last 2 years and where?<br>". $q1 .'<br><br>';
-	$message .= "How many siblings do you have?<br>". $q2 .'<br><br>';
-	$message .= "Do you play any other sports? If yes, which ones?<br>". $q3 .'<br><br>';
-	$message .= "What do you hope to gain from the Mike and Manny Camp?<br> ". $q4 .'<br><br>';
-	$message .= "What does ski racing mean to you?<br> ". $q5 .'<br><br>';
-	$message .= "Describe your perfect day on the mountain.<br> ". $q6 .'<br><br>';
-	$message .= "Describe yourself in 3 words.<br> ". $q7 .'<br><br>';
+	$message .= "How many off season camps have you attended in the last 2 years and where? ". $q1 .'<br>';
+	$message .= "How many siblings do you have?: ". $q2 .'<br>';
+	$message .= "Do you play any other sports? If yes, which ones? ". $q3 .'<br>';
+	$message .= "What do you hope to gain from the Mike and Manny Camp? ". $q4 .'<br>';
+	$message .= "What does ski racing mean to you? ". $q5 .'<br>';
+	$message .= "Describe your perfect day on the mountain. ". $q6 .'<br>';
+	$message .= "Describe yourself in 3 words. ". $q7 .'<br>';
 	$message .= '</body></html>';
 
 	$headers = "From: noreply@mikeandmanny.com" . "\r\n";

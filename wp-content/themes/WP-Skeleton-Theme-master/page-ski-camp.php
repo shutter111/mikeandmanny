@@ -7,6 +7,10 @@
 
 			if(have_rows('details')): while(have_rows('details')): the_row();
 ?>
+
+<?php get_template_part( 'templates/athlete-application' ); ?>
+<?php get_template_part( 'templates/coach-application' ); ?>
+
 				<div class="container" id="ski-camp-details">
 
 
@@ -63,13 +67,25 @@
 							<?php endwhile; ?>
 
 						</ul>
+						<div class="btn-wrapper">
 						<?php 
-							$formDisplay = get_field('display_form_button');
-							if($formDisplay == 1){ 
+							$athleteformDisplay = get_field('athlete_application');
+							$active = $athleteformDisplay[0]['display_button'][0]['display'];
+							$formTitle = $athleteformDisplay[0]['display_button'][0]['button_title'];
+							if($active == 1){ 
 						?>
-						<a href="#" class="mandmBtn open-athlete-form" target="_blank">Athlete application</a>
+						<a href="#" class="mandmBtn open-athlete-form" target="_blank"><?php echo $formTitle;?></a>
 						<?php }; ?>
 
+						<?php 
+							$coachformDisplay = get_field('coach_application');
+							$active = $coachformDisplay[0]['display_button'][0]['display'];
+							$formTitle = $coachformDisplay[0]['display_button'][0]['button_title'];
+							if($active == 1){ 
+						?>
+						<a href="#" class="mandmBtn open-coach-form" target="_blank"><?php echo $formTitle;?></a>
+						<?php }; ?>
+						</div>
 					</div>
 
 					<?php endif; ?>
@@ -78,13 +94,7 @@
 
 <?php endwhile; endif; ?>
 
-			<!--<div class="cta center">
-				<a class="mandmBtn applynow" data-attr="athlete" href="#">Apply Now</a>
-			</div>-->
-
-
 			<?php get_template_part( 'templates/section-mini-carousel' ); ?>
-
 
 <?php
 

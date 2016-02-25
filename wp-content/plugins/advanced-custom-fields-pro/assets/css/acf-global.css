@@ -618,6 +618,7 @@ img.acf-fw {
   border-color: #1B607F !important;
   box-shadow: none !important;
   color: #94CDE7 !important;
+  display:none;
 }
 /* orange */
 .acf-button.orange {

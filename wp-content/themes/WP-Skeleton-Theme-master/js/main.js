@@ -94,10 +94,10 @@ $(document).ready(function(){
 
 	// athlete form 
 	$('.next-btn').on('click',function () {
-		$('#form-carousel').carousel('next');
+		$('#athlete-carousel').carousel('next');
 	});
 	$('.prev-btn').on('click',function () {
-		$('#form-carousel').carousel('prev');
+		$('#athlete-carousel').carousel('prev');
 	});
 
 	// kill carousel auto play
@@ -107,69 +107,141 @@ $(document).ready(function(){
         });
     });
 
-    // form carousel 
+	// CLOSE ANY CAROSEL
+    $('.close-this-modal').on('click',function () {
+    	 $('.modal').modal('hide');
+    });
+
+    // coach carousel 
+    $('.open-coach-form').on('click',function (e) {
+    	e.preventDefault();
+    	$('#coach-application').modal('show');
+    });
+
+    // athlete carousel 
     $('.open-athlete-form').on('click',function (e) {
     	e.preventDefault();
     	$('#athlete-application').modal('show');
     });
-    $('#form-carousel').on('slide.bs.carousel', function (event) {
+
+    $('#athlete-carousel').on('slide.bs.carousel', function (event) {
     	var active = $(event.target).find('.carousel-inner > .item.active');
 		var from = active.index();
 		var next = $(event.relatedTarget);
 		var to = next.index();
 		var currentSlide = to;
 		if(to > 0){
-			$('#form-carousel .prev-btn').fadeIn();
+			$('#athlete-carousel .prev-btn').fadeIn();
 		}else{
-			$('#form-carousel .prev-btn').fadeOut();
+			$('#athlete-carousel .prev-btn').fadeOut();
 		}
 		if(to == 2 ){
-			$('#form-carousel .next-btn').fadeOut();
-			$('#form-carousel .form-submit').fadeIn();
+			$('#athlete-carousel .next-btn').fadeOut();
+			$('#athlete-carousel .form-submit').fadeIn();
 		}else{
-			$('#form-carousel .next-btn').fadeIn();
-			$('#form-carousel .form-submit').fadeOut();
+			$('#athlete-carousel .next-btn').fadeIn();
+			$('#athlete-carousel .form-submit').fadeOut();
 		}
-		$('#form-carousel .page-counter').html((currentSlide+1)+'/3'); 
+		$('#athlete-carousel .page-counter').html((currentSlide+1)+'/3'); 
 
     });
+ 	
 
-    $('.close-this-modal').on('click',function () {
-    	 $('#athlete-application').modal('hide');
+    // ATHLETE APPLICATION 
+    $('#athlete-carousel .apply-btn').on('click',function () {
+		collectAndSendAthleteData();
     });
 
-    $('.apply-btn').on('click',function () {
-    	
-		collectAndSendData();
+    // COACH APPLICATION 
+    $('#coach-carousel .apply-btn').on('click',function () {
+		collectAndSendCoachData();
     });
 
 
     // send form data 
-    function collectAndSendData () {
-    	var fName = $('#f-name').val();
-    	var lName = $('#l-name').val();
-    	var addr = $('#address').val();
-    	var city = $('#city').val();
-    	var province = $('#province :selected').text();
-    	var phone = $('#phone').val();
-    	var email = $('#email').val();
-    	var skiClub = $('#ski-club').val();
-    	var coachName = $('#c-name').val();
-    	var gender = $('#gender :selected').text();
-    	var yob = $('#yob').val();
-    	var height = $('#height').val();
-    	var weight = $('#weight').val();
-    	var hSize = $('#helmet-size').val();
-    	var pSize = $('#pole-size').val();
-    	var sSize = $('#shirt-size').val();
-    	var q1 = $('#q-1').val();
-    	var q2 = $('#q-2').val();
-    	var q3 = $('#q-3').val();
-    	var q4 = $('#q-4').val();
-    	var q5 = $('#q-5').val();
-    	var q6 = $('#q-6').val();
-    	var q7 = $('#q-7').val();
+    function collectAndSendCoachData () {
+    	var fName = $('#coach-carousel #f-name').val();
+    	var lName = $('#coach-carousel #l-name').val();
+    	var addr = $('#coach-carousel #address').val();
+    	var city = $('#coach-carousel #city').val();
+    	var province = $('#coach-carousel #province :selected').text();
+    	var phone = $('#coach-carousel #phone').val();
+    	var email = $('#coach-carousel #email').val();
+    	var skiClub = $('#coach-carousel #ski-club').val();
+    	var athName = $('#coach-carousel #athletes-name').val();
+    	var ref = $('#coach-carousel #reference').val();
+    	
+    	var valid = true;
+    	var msg = "";
 
+    	if(fName == ''){ valid = false;  msg+= "<div class='error-item'>First Name </div>";}
+    	if(lName == ''){ valid = false; msg+= "<div class='error-item'>Last Name</div>";}
+    	if(addr == ''){ valid = false; msg+= "<div class='error-item'>Address</div>";}
+    	if(city == ''){ valid = false; msg+= "<div class='error-item'>City</div>";}
+    	if(phone == ''){ valid = false; msg+= "<div class='error-item'>Phone</div>";}
+    	if(email == '' || !validateEmail(email) ){ valid = false; msg+= "<div class='error-item'>Email</div>";}
+    	if(skiClub == ''){ valid = false; msg+= "<div class='error-item'>Ski Club</div>";}
+    	
+ 
+    	if(valid){
+    		$('#coach-carousel').carousel(1);
+			$('#coach-carousel .form-submit').fadeOut();
+			$('#coach-carousel .form-error').html('');
+		
+			var data =  {
+						 'FormEmail':$('.modal-form').data('email'),	
+		                 'FName': fName,
+		                 'LName': lName,
+		                 'addr': addr,
+		                 'city': city,
+		                 'province': province,
+		                 'phone': phone,
+		                 'email': email,
+		                 'skiClub': skiClub,
+		                 'athName': athName,
+		                 'ref': ref
+                  		};
+
+			      $.ajax({
+			        type: "POST",
+			        url: '/form-submits/AddACoach.php',
+			        data: data,
+			        success: function (){ console.log("SENT DATA "); }
+			      });
+
+    	} else {
+    		$('#coach-application .form-error').html(msg);
+    	}
+
+
+    }
+
+
+    // send form data 
+    function collectAndSendAthleteData () {
+    	var fName = $('#athlete-carousel #f-name').val();
+    	var lName = $('#athlete-carousel #l-name').val();
+    	var addr = $('#athlete-carousel #address').val();
+    	var city = $('#athlete-carousel #city').val();
+    	var province = $('#athlete-carousel #province :selected').text();
+    	var phone = $('#athlete-carousel #phone').val();
+    	var email = $('#athlete-carousel #email').val();
+    	var skiClub = $('#athlete-carousel#ski-club').val();
+    	var coachName = $('#athlete-carousel#c-name').val();
+    	var gender = $('#athlete-carousel .gender :selected').text();
+    	var yob = $('#athlete-carousel #yob').val();
+    	var height = $('#athlete-carousel #height').val();
+    	var weight = $('#athlete-carousel #weight').val();
+    	var hSize = $('#athlete-carousel #helmet-size').val();
+    	var pSize = $('#athlete-carousel #pole-size').val();
+    	var sSize = $('#athlete-carousel #shirt-size').val();
+    	var q1 = $('#athlete-carousel #q-1').val();
+    	var q2 = $('#athlete-carousel #q-2').val();
+    	var q3 = $('#athlete-carousel #q-3').val();
+    	var q4 = $('#athlete-carousel #q-4').val();
+    	var q5 = $('#athlete-carousel #q-5').val();
+    	var q6 = $('#athlete-carousel #q-6').val();
+    	var q7 = $('#athlete-carousel #q-7').val();
     	var valid = true;
     	var msg = "";
 
@@ -197,11 +269,11 @@ $(document).ready(function(){
     	if(q7 == ''){ valid = false; msg+= "<div class='error-item'>Question 7</div>";}
  
     	if(valid){
-    		$('#form-carousel').carousel(3);
-	    	$('#form-carousel .page-counter').html(''); 
-	    	$('#form-carousel .next-btn').fadeOut();
-			$('#form-carousel .form-submit').fadeOut();
-			$('#form-carousel .prev-btn').fadeOut();
+    		$('#athlete-carousel').carousel(3);
+	    	$('#athlete-carousel .page-counter').html(''); 
+	    	$('#athlete-carousel .next-btn').fadeOut();
+			$('#athlete-carousel .form-submit').fadeOut();
+			$('#athlete-carousel .prev-btn').fadeOut();
 
 			var data =  {
 						 'FormEmail':$('.modal-form').data('email'),	
@@ -217,7 +289,7 @@ $(document).ready(function(){
 		                 'gender': gender,
 		                 'yob': yob,
 		                 'height': height,
-		                 'weight ': weight ,
+		                 'weight': weight,
 		                 'hSize': hSize,
 		                 'pSize': pSize,
 		                 'sSize': sSize,
@@ -237,12 +309,10 @@ $(document).ready(function(){
 			        success: function (){ console.log("SENT DATA "); }
 			      });
 
-
     	} else {
-    		$('.form-error').html(msg);
+    		$('#athlete-application .form-error').html(msg);
     	}
 
-    	
 
     }
 

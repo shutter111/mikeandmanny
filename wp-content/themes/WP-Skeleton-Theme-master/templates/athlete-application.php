@@ -11,8 +11,7 @@
 	  <div class="center"><h2>Athlete application</h2></div>
 	  <form class="modal-form" data-email="<?php echo $formData[0]['email_to_send_data']?>">
 	  	<div class="form-error"></div>
-
-	  	<div id="form-carousel" class="carousel slide" data-ride="carousel">
+	  	<div id="athlete-carousel" class="carousel slide" data-ride="carousel">
 	  		<div class="carousel-inner" role="listbox">
 	  			<div class="item active">
 				  	<div class="row">

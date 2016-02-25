@@ -1844,7 +1844,8 @@ article.event {
 
 
 /**** ATHLETE APPLICATION MODAL  ******/
-#athlete-application {
+#athlete-application,
+#coach-application {
 	position: fixed;
 	z-index: 9999;
 	width: 100%;
@@ -1854,7 +1855,8 @@ article.event {
 	left: 0px;
 }
 
-#athlete-application .content-wrapper {
+#athlete-application .content-wrapper,
+#coach-application .content-wrapper {
 	position: relative;
 	margin: auto;
 	width: 100%;
@@ -1955,7 +1957,7 @@ article.event {
 	font-size: 18px;
 }
 
-.apply-btn {
+#athlete-application .apply-btn {
 	position: relative;
 	text-align: center;
 	background-color: #e7e930;
@@ -1963,7 +1965,15 @@ article.event {
 	margin: auto;
 }
 
-.form-submit {
+#coach-application .apply-btn {
+	position: relative;
+	text-align: center;
+	background-color: #e7e930;
+	padding: 20px 50px;
+	margin: auto;
+}
+
+#athlete-application .form-submit {
 	position: relative;
 	margin-top: 90px;
 	max-width: 200px;
@@ -1972,6 +1982,17 @@ article.event {
 	cursor: pointer;
 	display: none;
 }
+
+#coach-application .form-submit {
+	position: relative;
+	margin-top: 0px;
+	max-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+	display: block;
+}
+
 .center {
 	position: relative;
 	margin: auto;
@@ -1988,4 +2009,11 @@ article.event {
 	width: auto;
 	display: inline-block;
 	margin-right: 10px;
+}
+
+.btn-wrapper {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
 }

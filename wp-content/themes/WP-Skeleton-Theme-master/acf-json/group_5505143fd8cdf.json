@@ -200,23 +200,6 @@
             ]
         },
         {
-            "key": "field_56cf07d5184b6",
-            "label": "Display Athlete Form",
-            "name": "display_form_button",
-            "prefix": "",
-            "type": "true_false",
-            "instructions": "Use this field to display or not display the \"Athlete Application\" button. <br><br>\r\nChecked will display. No check wont display. ",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 1
-        },
-        {
             "key": "field_56cf17bf8b431",
             "label": "Athlete Application",
             "name": "athlete_application",
@@ -240,6 +223,75 @@
                     "label": "Athlete Application",
                     "display": "row",
                     "sub_fields": [
+                        {
+                            "key": "field_56cf561326dba",
+                            "label": "Display Button",
+                            "name": "display_button",
+                            "prefix": "",
+                            "type": "flexible_content",
+                            "instructions": "Use this block to set the button display and text. ",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "button_label": "Add Row",
+                            "min": "",
+                            "max": 1,
+                            "layouts": [
+                                {
+                                    "key": "56cf561b5928b",
+                                    "name": "display_button",
+                                    "label": "Display Button",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_56cf564826dbb",
+                                            "label": "Display",
+                                            "name": "display",
+                                            "prefix": "",
+                                            "type": "true_false",
+                                            "instructions": "Select this checkbox to display the button. If not selected the button will not display.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 50,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0
+                                        },
+                                        {
+                                            "key": "field_56cf567626dbc",
+                                            "label": "Button Title",
+                                            "name": "button_title",
+                                            "prefix": "",
+                                            "type": "text",
+                                            "instructions": "Use this field to enter the button text. This field is limited to 75 characters. ",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 50,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ]
+                        },
                         {
                             "key": "field_56cf29566758f",
                             "label": "Form Email",
@@ -715,6 +767,300 @@
                     "max": ""
                 }
             ]
+        },
+        {
+            "key": "field_56cf4ab1ef782",
+            "label": "Coach Application",
+            "name": "coach_application",
+            "prefix": "",
+            "type": "flexible_content",
+            "instructions": "Use this block to update the application form elements.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Athlete Application",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "56cf17d1b7e3c",
+                    "name": "coach_application",
+                    "label": "Coach Application",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_56cf538e1aed7",
+                            "label": "Display Button",
+                            "name": "display_button",
+                            "prefix": "",
+                            "type": "flexible_content",
+                            "instructions": "Use this block to set the button display and text. ",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "button_label": "Add Button and Display",
+                            "min": "",
+                            "max": 1,
+                            "layouts": [
+                                {
+                                    "key": "56cf54189c3cb",
+                                    "name": "display_button",
+                                    "label": "Display Button",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_56cf5468e6e7e",
+                                            "label": "Display",
+                                            "name": "display",
+                                            "prefix": "",
+                                            "type": "true_false",
+                                            "instructions": "Select this checkbox to display the button. If not selected the button will not display.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 50,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0
+                                        },
+                                        {
+                                            "key": "field_56cf5438e6e7d",
+                                            "label": "Button Title",
+                                            "name": "button_title",
+                                            "prefix": "",
+                                            "type": "text",
+                                            "instructions": "Use this field to enter the button text. This field is limited to 75 characters. ",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 50,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": 75,
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_56cf4ab1ef783",
+                            "label": "Form Email",
+                            "name": "email_to_send_data",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "This will be the email all form entries are sent to. If you want to send to multiple users add a \",\" between emails. <br> email@emai1.com,email@email2.com",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf4ab1ef784",
+                            "label": "First Name",
+                            "name": "first_name",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user First Name Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf4ab1ef785",
+                            "label": "Last Name",
+                            "name": "last_name",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user Last Name Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf4ab1ef789",
+                            "label": "Phone Number",
+                            "name": "phone_number",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user Phone Number Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf4ab1ef78a",
+                            "label": "Email",
+                            "name": "email",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter a user Emaily Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf4ab1ef78b",
+                            "label": "Ski Club",
+                            "name": "ski_club",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter Ski Club Label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf5cfaf408f",
+                            "label": "Athletes name",
+                            "name": "athletes_name",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter the Athletes name.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf4b9850f19",
+                            "label": "Reference",
+                            "name": "reference",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Use this field to enter your reference\/recommendation label",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf4ab1ef796",
+                            "label": "Thank You Message",
+                            "name": "thank_you_message",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "Use this area to display the thank you message. ",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -732,5 +1078,5 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1456422677
+    "modified": 1456430364
 }

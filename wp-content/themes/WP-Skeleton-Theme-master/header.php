@@ -54,7 +54,6 @@ var _wpcf7 = {"loaderUrl":"\/wp-content\/plugins\/contact-form-7\/images\/ajax-l
 </head>
 
 <body <?php body_class(); ?>><!-- the Body  -->
-  <?php get_template_part( 'templates/athlete-application' ); ?>
 	<div id="pageContainer">
 		<div class="containerWrapper">
 
