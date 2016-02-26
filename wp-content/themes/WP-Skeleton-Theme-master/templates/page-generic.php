@@ -113,7 +113,7 @@
 						</div>
 					</div>
 					<div class="copy-block">
-						<h2>Applications for 2016 Ski Camp are now open</h2>
+						<h2>Applications for our 2016 Ski Camp are now open</h2>
 					</div>
 					<div class="btn-wrapper-home margin-left">
 						<?php 
