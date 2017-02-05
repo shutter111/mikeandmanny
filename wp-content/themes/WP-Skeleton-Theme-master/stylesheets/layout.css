@@ -1844,7 +1844,8 @@ article.event {
 
 
 /**** ATHLETE APPLICATION MODAL  ******/
-#athlete-application,
+#athlete-application, 
+#athlete-application-fr,
 #coach-application {
 	position: fixed;
 	z-index: 9999;
@@ -1856,6 +1857,7 @@ article.event {
 }
 
 #athlete-application .content-wrapper,
+#athlete-application-fr .content-wrapper,
 #coach-application .content-wrapper {
 	position: relative;
 	margin: auto;

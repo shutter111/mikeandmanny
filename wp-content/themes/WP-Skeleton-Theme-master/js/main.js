@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	var slider;
 	if($(window).width() <= 767){
 
@@ -123,6 +122,13 @@ $(document).ready(function(){
     	e.preventDefault();
     	$('#athlete-application').modal('show');
     });
+
+    $('.open-athlete-form-fr').on('click',function (e) {
+    	console.log( " CLICKED " );
+    	e.preventDefault();
+    	$('#athlete-application-fr').modal('show');
+    });
+
 
     $('#athlete-carousel').on('slide.bs.carousel', function (event) {
     	var active = $(event.target).find('.carousel-inner > .item.active');

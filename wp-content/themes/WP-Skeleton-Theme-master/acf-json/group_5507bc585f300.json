@@ -49,6 +49,28 @@
             ]
         },
         {
+            "key": "field_56ec97ef1bfcb",
+            "label": "CTA Message",
+            "name": "cta_message",
+            "prefix": "",
+            "type": "text",
+            "instructions": "Use this field to enter the application form title. \r\n<br>This title is placed directly above the form button's.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
             "key": "field_56cf72201b028",
             "label": "Display Button Althete Application",
             "name": "display_button_athlete",
@@ -201,6 +223,8 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
-    "modified": 1456435857
+    "hide_on_screen": [
+        "revisions"
+    ],
+    "modified": 1458346071
 }

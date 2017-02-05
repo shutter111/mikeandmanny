@@ -112,9 +112,15 @@
 							</div>
 						</div>
 					</div>
+					<?php 
+						$ctaDisplay = get_field('cta_message',69);
+						if($ctaDisplay){ 
+					?>
 					<div class="copy-block">
-						<h2>Applications for our 2016 Ski Camp are now open</h2>
+						
+						<h2><?php echo $ctaDisplay; ?></h2>
 					</div>
+					<?php }; ?>
 					<div class="btn-wrapper-home margin-left">
 						<?php 
 							$athleteformDisplay = get_field('display_button_athlete',69);
@@ -124,7 +130,7 @@
 						?>
 						 <a href="#" class="mandmBtn open-athlete-form" target="_blank"><?php echo $formTitle;?></a>
 						<?php }; ?>
-
+						 <a href="#" class="mandmBtn open-athlete-form-fr" target="_blank">FR Form</a>
 						<?php 
 							$coachformDisplay = get_field('display_button_coach',69);
 							$active = $coachformDisplay[0]['display'];
