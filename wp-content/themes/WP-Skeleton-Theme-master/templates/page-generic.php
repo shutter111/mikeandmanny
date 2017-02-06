@@ -126,18 +126,22 @@
 							$athleteformDisplay = get_field('display_button_athlete',69);
 							$active = $athleteformDisplay[0]['display'];
 							$formTitle = $athleteformDisplay[0]['button_title'];
+							$frFormTitle = $athleteformDisplay[0]['french_button_title'];
 							if($active == 1){ 
 						?>
 						 <a href="#" class="mandmBtn open-athlete-form" target="_blank"><?php echo $formTitle;?></a>
+						 <a href="#" class="mandmBtn open-athlete-form-fr" target="_blank"><?php echo $frFormTitle;?></a>
 						<?php }; ?>
-						 <a href="#" class="mandmBtn open-athlete-form-fr" target="_blank">FR Form</a>
+
 						<?php 
 							$coachformDisplay = get_field('display_button_coach',69);
 							$active = $coachformDisplay[0]['display'];
 							$formTitle = $coachformDisplay[0]['button_title'];
+							$frFormTitle = $coachformDisplay[0]['french_button_title'];
 							if($active == 99){ 
 						?>
 							<a href="#" class="mandmBtn open-coach-form" target="_blank"><?php echo $formTitle;?></a>
+							<a href="#" class="mandmBtn open-coach-form-fr" target="_blank"><?php echo $frFormTitle;?></a>
 						<?php }; ?>
 					</div>
 				</li>

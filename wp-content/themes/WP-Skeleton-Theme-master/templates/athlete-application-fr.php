@@ -11,7 +11,7 @@
 	  <div class="center"><h2>Athlete application French</h2></div>
 	  <form class="modal-form" data-email="<?php echo $formData[0]['email_to_send_data']?>">
 	  	<div class="form-error"></div>
-	  	<div id="athlete-carousel" class="carousel slide" data-ride="carousel">
+	  	<div id="athlete-carousel-fr" class="carousel slide" data-ride="carousel">
 	  		<div class="carousel-inner" role="listbox">
 	  			<div class="item active">
 				  	<div class="row">
@@ -146,10 +146,10 @@
 
 			</div>
 			<div class="page-counter">1/3</div>
-			<div class="next-btn n-btn">NEXT <span class="glyphicon glyphicon-menu-right"></span></div>
+			<div class="next-btn n-btn">PROCHAIN <span class="glyphicon glyphicon-menu-right"></span></div>
 			<div class="prev-btn n-btn"><span class="glyphicon glyphicon-menu-left"></span> PREV</div>
 			<div class="row form-submit">
-				<div class="apply-btn">APPLY</div>
+				<div class="apply-btn">APPLIQUER</div>
 			</div>
     	</div><!-- END CAROUSEL -->		
 	  </form> 

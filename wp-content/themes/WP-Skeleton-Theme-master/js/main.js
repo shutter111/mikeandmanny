@@ -98,6 +98,14 @@ $(document).ready(function(){
 	$('.prev-btn').on('click',function () {
 		$('#athlete-carousel').carousel('prev');
 	});
+	// athlete fr form
+	$('#athlete-application-fr .next-btn').on('click',function () {
+		$('#athlete-carousel-fr').carousel('next');
+	});
+	$('#athlete-application-fr .prev-btn').on('click',function () {
+		$('#athlete-carousel-fr').carousel('prev');
+	});
+
 
 	// kill carousel auto play
 	$('.carousel').each(function(){
@@ -116,19 +124,23 @@ $(document).ready(function(){
     	e.preventDefault();
     	$('#coach-application').modal('show');
     });
+    // FRENCH 
+    $('.open-coach-form-fr').on('click',function (e) {
+    	e.preventDefault();
+    	$('#coach-application-fr').modal('show');
+    });
+
 
     // athlete carousel 
     $('.open-athlete-form').on('click',function (e) {
     	e.preventDefault();
     	$('#athlete-application').modal('show');
     });
-
+    // ATHLETICS FRENCH 
     $('.open-athlete-form-fr').on('click',function (e) {
-    	console.log( " CLICKED " );
     	e.preventDefault();
     	$('#athlete-application-fr').modal('show');
     });
-
 
     $('#athlete-carousel').on('slide.bs.carousel', function (event) {
     	var active = $(event.target).find('.carousel-inner > .item.active');
@@ -151,31 +163,67 @@ $(document).ready(function(){
 		$('#athlete-carousel .page-counter').html((currentSlide+1)+'/3'); 
 
     });
+
+    $('#athlete-carousel-fr').on('slide.bs.carousel', function (event) {
+    	var active = $(event.target).find('.carousel-inner > .item.active');
+		var from = active.index();
+		var next = $(event.relatedTarget);
+		var to = next.index();
+		var currentSlide = to;
+		if(to > 0){
+			$('#athlete-carousel-fr .prev-btn').fadeIn();
+		}else{
+			$('#athlete-carousel-fr .prev-btn').fadeOut();
+		}
+		if(to == 2 ){
+			$('#athlete-carousel-fr .next-btn').fadeOut();
+			$('#athlete-carousel-fr .form-submit').fadeIn();
+		}else{
+			$('#athlete-carousel-fr .next-btn').fadeIn();
+			$('#athlete-carousel-fr .form-submit').fadeOut();
+		}
+		$('#athlete-carousel-fr .page-counter').html((currentSlide+1)+'/3'); 
+
+    });
  	
 
     // ATHLETE APPLICATION 
     $('#athlete-carousel .apply-btn').on('click',function () {
-		collectAndSendAthleteData();
+		collectAndSendAthleteData('en');
     });
+
+    // ATHLETE APPLICATION FRENCH
+    $('#athlete-carousel-fr .apply-btn').on('click',function () {
+		collectAndSendAthleteData('fr');
+    });
+
 
     // COACH APPLICATION 
     $('#coach-carousel .apply-btn').on('click',function () {
-		collectAndSendCoachData();
+		collectAndSendCoachData('en');
+    });
+
+    $('#coach-carousel-fr .apply-btn').on('click',function () {
+		collectAndSendCoachData('fr');
     });
 
 
     // send form data 
-    function collectAndSendCoachData () {
-    	var fName = $('#coach-carousel #f-name').val();
-    	var lName = $('#coach-carousel #l-name').val();
-    	var addr = $('#coach-carousel #address').val();
-    	var city = $('#coach-carousel #city').val();
-    	var province = $('#coach-carousel #province :selected').text();
-    	var phone = $('#coach-carousel #phone').val();
-    	var email = $('#coach-carousel #email').val();
-    	var skiClub = $('#coach-carousel #ski-club').val();
-    	var athName = $('#coach-carousel #athletes-name').val();
-    	var ref = $('#coach-carousel #reference').val();
+    function collectAndSendCoachData (lang) {
+
+    	var container = '#coach-carousel';
+    	if(lang === 'fr'){container = '#coach-carousel-fr';}
+
+    	var fName = $(container + ' #f-name').val();
+    	var lName = $(container + ' #l-name').val();
+    	var addr = $(container + ' #address').val();
+    	var city = $(container + ' #city').val();
+    	var province = $(container + ' #province :selected').text();
+    	var phone = $(container + ' #phone').val();
+    	var email = $(container + ' #email').val();
+    	var skiClub = $(container + ' #ski-club').val();
+    	var athName = $(container + ' #athletes-name').val();
+    	var ref = $(container + ' #reference').val();
     	
     	var valid = true;
     	var msg = "";
@@ -190,12 +238,12 @@ $(document).ready(function(){
     	
  
     	if(valid){
-    		$('#coach-carousel').carousel(1);
-			$('#coach-carousel .form-submit').fadeOut();
-			$('#coach-carousel .form-error').html('');
+    		$(container).carousel(1);
+			$(container + ' .form-submit').fadeOut();
+			$(container + ' .form-error').html('');
 		
 			var data =  {
-						 'FormEmail':$('.modal-form').data('email'),	
+						 'FormEmail':$(container + ' .modal-form').data('email'),	
 		                 'FName': fName,
 		                 'LName': lName,
 		                 'addr': addr,
@@ -212,11 +260,11 @@ $(document).ready(function(){
 			        type: "POST",
 			        url: '/form-submits/AddACoach.php',
 			        data: data,
-			        success: function (){ console.log("SENT DATA "); }
+			        success: function (){ console.log("SENT DATA ");  }
 			      });
 
     	} else {
-    		$('#coach-application .form-error').html(msg);
+    		$(container + ' .form-error').html(msg);
     	}
 
 
@@ -224,30 +272,33 @@ $(document).ready(function(){
 
 
     // send form data 
-    function collectAndSendAthleteData () {
-    	var fName = $('#athlete-carousel #f-name').val();
-    	var lName = $('#athlete-carousel #l-name').val();
-    	var addr = $('#athlete-carousel #address').val();
-    	var city = $('#athlete-carousel #city').val();
-    	var province = $('#athlete-carousel #province :selected').text();
-    	var phone = $('#athlete-carousel #phone').val();
-    	var email = $('#athlete-carousel #email').val();
-    	var skiClub = $('#athlete-carousel#ski-club').val();
-    	var coachName = $('#athlete-carousel#c-name').val();
-    	var gender = $('#athlete-carousel .gender :selected').text();
-    	var yob = $('#athlete-carousel #yob').val();
-    	var height = $('#athlete-carousel #height').val();
-    	var weight = $('#athlete-carousel #weight').val();
-    	var hSize = $('#athlete-carousel #helmet-size').val();
-    	var pSize = $('#athlete-carousel #pole-size').val();
-    	var sSize = $('#athlete-carousel #shirt-size').val();
-    	var q1 = $('#athlete-carousel #q-1').val();
-    	var q2 = $('#athlete-carousel #q-2').val();
-    	var q3 = $('#athlete-carousel #q-3').val();
-    	var q4 = $('#athlete-carousel #q-4').val();
-    	var q5 = $('#athlete-carousel #q-5').val();
-    	var q6 = $('#athlete-carousel #q-6').val();
-    	var q7 = $('#athlete-carousel #q-7').val();
+    function collectAndSendAthleteData (lang) {
+
+    	var container = '#athlete-carousel';
+    	if(lang === 'fr'){container = '#athlete-carousel-fr';}
+    	var fName = $(container+' #f-name').val();
+    	var lName = $(container+' #l-name').val();
+    	var addr = $(container+' #address').val();
+    	var city = $(container+' #city').val();
+    	var province = $(container+' #province :selected').text();
+    	var phone = $(container+' #phone').val();
+    	var email = $(container+' #email').val();
+    	var skiClub = $(container+'#ski-club').val();
+    	var coachName = $(container+'#c-name').val();
+    	var gender = $(container+' .gender :selected').text();
+    	var yob = $(container+' #yob').val();
+    	var height = $(container+' #height').val();
+    	var weight = $(container+' #weight').val();
+    	var hSize = $(container+' #helmet-size').val();
+    	var pSize = $(container+' #pole-size').val();
+    	var sSize = $(container+' #shirt-size').val();
+    	var q1 = $(container+' #q-1').val();
+    	var q2 = $(container+' #q-2').val();
+    	var q3 = $(container+' #q-3').val();
+    	var q4 = $(container+' #q-4').val();
+    	var q5 = $(container+' #q-5').val();
+    	var q6 = $(container+' #q-6').val();
+    	var q7 = $(container+' #q-7').val();
     	var valid = true;
     	var msg = "";
 
@@ -275,14 +326,14 @@ $(document).ready(function(){
     	if(q7 == ''){ valid = false; msg+= "<div class='error-item'>Question 7</div>";}
  
     	if(valid){
-    		$('#athlete-carousel').carousel(3);
-	    	$('#athlete-carousel .page-counter').html(''); 
-	    	$('#athlete-carousel .next-btn').fadeOut();
-			$('#athlete-carousel .form-submit').fadeOut();
-			$('#athlete-carousel .prev-btn').fadeOut();
+    		$(container).carousel(3);
+	    	$(container+' .page-counter').html(''); 
+	    	$(container+' .next-btn').fadeOut();
+			$(container+' .form-submit').fadeOut();
+			$(container+' .prev-btn').fadeOut();
 
 			var data =  {
-						 'FormEmail':$('.modal-form').data('email'),	
+						 'FormEmail':$(container + ' .modal-form').data('email'),	
 		                 'FName': fName,
 		                 'LName': lName,
 		                 'addr': addr,
@@ -312,11 +363,11 @@ $(document).ready(function(){
 			        type: "POST",
 			        url: '/form-submits/AddAUser.php',
 			        data: data,
-			        success: function (){ console.log("SENT DATA "); }
+			        success: function (){ console.log("SENT DATA ");  }
 			      });
 
     	} else {
-    		$('#athlete-application .form-error').html(msg);
+    		$(container+' .form-error').html(msg);
     	}
 
 

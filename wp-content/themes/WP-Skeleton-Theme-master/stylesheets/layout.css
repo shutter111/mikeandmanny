@@ -226,8 +226,13 @@ input[type="submit"], input[type="file"] {
 	text-decoration: none !important;
 	cursor: pointer;
 	border: none;
-
 	transition: all .3s linear;
+	position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    width: 50%;
+    margin-left: -4px;
+    border-right: solid 2px #fff;
 }
 	.mandmBtn.applynow{
 		font-size: 1.31rem;
@@ -1846,7 +1851,8 @@ article.event {
 /**** ATHLETE APPLICATION MODAL  ******/
 #athlete-application, 
 #athlete-application-fr,
-#coach-application {
+#coach-application,
+#coach-application-fr {
 	position: fixed;
 	z-index: 9999;
 	width: 100%;
@@ -1858,7 +1864,8 @@ article.event {
 
 #athlete-application .content-wrapper,
 #athlete-application-fr .content-wrapper,
-#coach-application .content-wrapper {
+#coach-application .content-wrapper,
+#coach-application-fr .content-wrapper {
 	position: relative;
 	margin: auto;
 	width: 100%;
@@ -1959,7 +1966,8 @@ article.event {
 	font-size: 18px;
 }
 
-#athlete-application .apply-btn {
+#athlete-application .apply-btn,
+#athlete-application-fr .apply-btn {
 	position: relative;
 	text-align: center;
 	background-color: #e7e930;
@@ -1967,7 +1975,8 @@ article.event {
 	margin: auto;
 }
 
-#coach-application .apply-btn {
+#coach-application .apply-btn,
+#coach-application-fr .apply-btn {
 	position: relative;
 	text-align: center;
 	background-color: #e7e930;
@@ -1975,7 +1984,8 @@ article.event {
 	margin: auto;
 }
 
-#athlete-application .form-submit {
+#athlete-application .form-submit,
+#athlete-application-fr .form-submit {
 	position: relative;
 	margin-top: 90px;
 	max-width: 200px;
@@ -1985,7 +1995,8 @@ article.event {
 	display: none;
 }
 
-#coach-application .form-submit {
+#coach-application .form-submit,
+#coach-application-fr .form-submit {
 	position: relative;
 	margin-top: 0px;
 	max-width: 200px;
@@ -2024,7 +2035,7 @@ article.event {
     width: 100%;
     position: relative;
     text-align: center;
-    margin-top: 30px;
+    margin-top: -20px;
 }
 
 .margin-left {
